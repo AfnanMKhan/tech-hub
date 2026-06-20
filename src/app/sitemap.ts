@@ -1,15 +1,18 @@
 import { MetadataRoute } from "next";
 
 async function getProducts() {
-  const res = await fetch("http://localhost:3000/api/products", {
-    cache: "no-store",
-  });
+  const res = await fetch(
+    "https://techhubv.vercel.app/api/products",
+    {
+      cache: "no-store",
+    }
+  );
 
   return res.json();
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = "http://localhost:3000";
+  const baseUrl = "https://techhubv.vercel.app";
 
   const products = await getProducts();
 
@@ -19,7 +22,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/compare",
     "/category/mobile",
     "/category/laptop",
-    "/category/gaming",
     "/blog/best-phone-under-20000",
     "/blog/best-gaming-phone-under-30000",
     "/blog/iphone-15-review",
@@ -33,7 +35,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }));
 
   const productUrls = products.map((p: any) => ({
-    url: `${baseUrl}/blog/${p.name.toLowerCase().replace(/ /g, "-")}`,
+    url: `${baseUrl}/product/${p.id}`,
     lastModified: new Date(),
   }));
 
