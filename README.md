@@ -24,7 +24,7 @@ A production-oriented e-commerce and product comparison starter inspired by Amaz
 ## API Endpoints
 
 - `GET /api/products?q=&category=&brand=` - list/search/filter products
-- `POST /api/products` - create product
+- `POST  - create product
 - `GET /api/products/:id` - product detail
 - `PATCH /api/products/:id` - update product
 - `DELETE /api/products/:id` - delete product
@@ -44,7 +44,7 @@ cp .env.example .env
 npm run dev
 ```
 
-Open `http://localhost:3000`.
+Open ` `${process.env.NEXT_PUBLIC_SITE_URL},`.
 
 For a real database:
 
