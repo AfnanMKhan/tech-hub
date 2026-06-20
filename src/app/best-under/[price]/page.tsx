@@ -21,9 +21,9 @@ async function getProducts(): Promise<Product[]> {
 export async function generateMetadata({
   params,
 }: {
-  params: { price: string };
+  params: Promise<{ price: string }>;
 }) {
-  const price = params.price;
+  const { price } = await params;
 
   return {
     title: `Best Under ₹${price} Products 2026`,
@@ -34,11 +34,15 @@ export async function generateMetadata({
 export default async function Page({
   params,
 }: {
-  params: { price: string };
+  params: Promise<{ price: string }>;
 }) {
-  const maxPrice = Number(params.price);
+  const { price } = await params;
 
-  if (isNaN(maxPrice)) return notFound();
+  const maxPrice = Number(price);
+
+  if (isNaN(maxPrice)) {
+    notFound();
+  }
 
   const products = await getProducts();
 
@@ -88,20 +92,15 @@ export default async function Page({
             </h2>
 
             <p>₹{product.price}</p>
-
             <p>⭐ {product.rating}</p>
 
-            <Link
-              href={`/product/${product.id}`}
-              style={{ color: "blue" }}
-            >
+            <Link href={`/product/${product.id}`}>
               View Product
             </Link>
           </div>
         ))}
       </div>
 
-      {/* Internal SEO Links */}
       <section style={{ marginTop: 40 }}>
         <h2>More Budget Ranges</h2>
 

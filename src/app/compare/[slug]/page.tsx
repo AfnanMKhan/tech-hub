@@ -64,9 +64,11 @@ const data: Comparison[] = [
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const item = data.find((d) => d.slug === params.slug);
+  const { slug } = await params;
+
+  const item = data.find((d) => d.slug === slug);
 
   if (!item) {
     return {
@@ -80,12 +82,14 @@ export async function generateMetadata({
   };
 }
 
-export default function ComparisonPage({
+export default async function ComparisonPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const item = data.find((d) => d.slug === params.slug);
+  const { slug } = await params;
+
+  const item = data.find((d) => d.slug === slug);
 
   if (!item) return notFound();
 

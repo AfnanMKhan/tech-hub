@@ -19,14 +19,14 @@ async function getProducts(): Promise<Product[]> {
 export default async function CategoryPage({
   params,
 }: {
-  params: { category: string };
+  params: Promise<{ category: string }>;
 }) {
-  const category = params.category.toLowerCase();
+  const { category } = await params;
 
   const products = await getProducts();
 
   const filtered = products.filter((p) =>
-    p.category?.toLowerCase().includes(category)
+    p.category?.toLowerCase().includes(category.toLowerCase())
   );
 
   return (
@@ -35,12 +35,19 @@ export default async function CategoryPage({
 
       <div style={{ display: "grid", gap: 15 }}>
         {filtered.map((p) => (
-          <div key={p.id} style={{ border: "1px solid #ddd", padding: 10 }}>
+          <div
+            key={p.id}
+            style={{ border: "1px solid #ddd", padding: 10 }}
+          >
             <h3>{p.name}</h3>
             <p>₹{p.price}</p>
             <p>⭐ {p.rating}</p>
 
-            <Link href={`/blog/${p.name.toLowerCase().replace(/ /g, "-")}`}>
+            <Link
+              href={`/blog/${p.name
+                .toLowerCase()
+                .replace(/ /g, "-")}`}
+            >
               View Review
             </Link>
           </div>

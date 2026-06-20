@@ -17,13 +17,14 @@ async function getProducts(): Promise<Product[]> {
   return res.json();
 }
 
-/* 🔥 SEO FIX (ADD THIS) */
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const keyword = decodeURIComponent(params.slug);
+  const { slug } = await params;
+
+  const keyword = decodeURIComponent(slug);
 
   return {
     title: `${keyword} - Best Guide 2026`,
@@ -34,16 +35,20 @@ export async function generateMetadata({
 export default async function BlogPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const keyword = decodeURIComponent(params.slug);
+  const { slug } = await params;
+
+  const keyword = decodeURIComponent(slug);
 
   const products = await getProducts();
 
-  if (!products.length) return notFound();
+  if (!products.length) {
+    notFound();
+  }
 
   const filteredProducts = products.filter((p) => {
-    const text = `${p.name} ${p.category}`.toLowerCase();
+    const text = `${p.name} ${p.category ?? ""}`.toLowerCase();
     return text.includes(keyword.toLowerCase());
   });
 
@@ -69,11 +74,24 @@ export default async function BlogPage({
     .replace(/-/g, " ")
     .toLowerCase();
 
-  const content = await generateAIBlog(dynamicKeyword, productsHtml);
+  const content = await generateAIBlog(
+    dynamicKeyword,
+    productsHtml
+  );
 
   return (
-    <main style={{ maxWidth: 800, margin: "auto", padding: 20 }}>
-      <div dangerouslySetInnerHTML={{ __html: content }} />
+    <main
+      style={{
+        maxWidth: 800,
+        margin: "auto",
+        padding: 20,
+      }}
+    >
+      <div
+        dangerouslySetInnerHTML={{
+          __html: content,
+        }}
+      />
     </main>
   );
 }
