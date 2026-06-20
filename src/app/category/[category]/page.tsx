@@ -3,9 +3,17 @@ import Link from "next/link";
 type Product = {
   id: string;
   name: string;
-  category: string;
+  brand?: string;
+  image?: string;
+  category?: string;
+
   price: number;
   rating: number;
+
+  battery?: string;
+  camera?: string;
+  display?: string;
+  processor?: string;
 };
 
 async function getProducts(): Promise<Product[]> {

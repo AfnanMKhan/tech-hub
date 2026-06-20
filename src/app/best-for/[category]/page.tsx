@@ -4,14 +4,17 @@ import { notFound } from "next/navigation";
 type Product = {
   id: string;
   name: string;
-  category: string;
-  image: string;
+  brand?: string;
+  image?: string;
+  category?: string;
+
   price: number;
   rating: number;
-  specs: {
-    battery?: string;
-    camera?: string;
-  };
+
+  battery?: string;
+  camera?: string;
+  display?: string;
+  processor?: string;
 };
 
 async function getProducts(): Promise<Product[]> {
@@ -29,12 +32,12 @@ const categoryMap: Record<string, (p: Product) => boolean> = {
 
   students: (p) => p.price <= 20000,
 
-  battery: (p) =>
-    p.specs?.battery?.toLowerCase().includes("5000") ||
+    battery: (p) =>
+    p.battery?.toLowerCase().includes("5000") ||
     p.category?.toLowerCase() === "mobile",
 
   photography: (p) =>
-    p.specs?.camera?.toLowerCase().includes("high") ||
+    !!p.camera ||
     p.category?.toLowerCase() === "mobile",
 
   budget: (p) => p.price <= 15000,

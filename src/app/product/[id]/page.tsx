@@ -4,27 +4,18 @@ import ProductSchema from "@/components/ProductSchema";
 
 type Product = {
   id: string;
-  slug: string;
   name: string;
-  brand: string;
-  category: string;
-  image: string;
+  brand?: string;
+  image?: string;
+  category?: string;
+
   price: number;
-  mrp: number;
   rating: number;
-  reviewsCount: number;
-  specs: {
-    display: string;
-    processor: string;
-    ram: string;
-    storage: string;
-    camera: string;
-    battery: string;
-    os: string;
-    weight: string;
-  };
-  pros: string[];
-  cons: string[];
+
+  battery?: string;
+  camera?: string;
+  display?: string;
+  processor?: string;
 };
 
 async function getProduct(id: string): Promise<Product | null> {
@@ -94,22 +85,11 @@ export default async function ProductPage({
       <p style={{ color: "gray" }}>{product.brand}</p>
 
       {/* Price */}
-      <p>
-        ₹{product.price}{" "}
-        <span
-          style={{
-            textDecoration: "line-through",
-            color: "gray",
-            marginLeft: 10,
-          }}
-        >
-          ₹{product.mrp}
-        </span>
-      </p>
-
+      <p>₹{product.price}</p>
+        
       {/* Rating */}
       <p>
-        ⭐ {product.rating} ({product.reviewsCount} reviews)
+        ⭐ {product.rating}
       </p>
 
       {/* Buy Button */}
@@ -134,32 +114,10 @@ export default async function ProductPage({
       {/* Specs */}
       <h2>Specifications</h2>
       <ul>
-        <li>Display: {product.specs.display}</li>
-        <li>Processor: {product.specs.processor}</li>
-        <li>RAM: {product.specs.ram}</li>
-        <li>Storage: {product.specs.storage}</li>
-        <li>Camera: {product.specs.camera}</li>
-        <li>Battery: {product.specs.battery}</li>
-        <li>OS: {product.specs.os}</li>
-        <li>Weight: {product.specs.weight}</li>
-      </ul>
-
-      <hr style={{ margin: "30px 0" }} />
-
-      {/* Pros */}
-      <h2>Pros</h2>
-      <ul>
-        {product.pros.map((p, i) => (
-          <li key={i}>{p}</li>
-        ))}
-      </ul>
-
-      {/* Cons */}
-      <h2>Cons</h2>
-      <ul>
-        {product.cons.map((c, i) => (
-          <li key={i}>{c}</li>
-        ))}
+        <li>Display: {product.display}</li>
+        <li>Processor: {product.processor}</li>
+        <li>Camera: {product.camera}</li>
+        <li>Battery: {product.battery}</li>
       </ul>
 
       <hr style={{ margin: "30px 0" }} />
