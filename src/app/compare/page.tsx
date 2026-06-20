@@ -1,94 +1,70 @@
-"use client";
+import Link from "next/link";
 
-import { useEffect, useState } from "react";
+type CompareItem = {
+  title: string;
+  slug: string;
+  description: string;
+};
+
+const comparisons: CompareItem[] = [
+  {
+    title: "iPhone vs Android",
+    slug: "iphone-vs-android",
+    description: "Compare performance, camera, battery and ecosystem.",
+  },
+  {
+    title: "Laptop vs Tablet",
+    slug: "laptop-vs-tablet",
+    description: "Best for productivity, study and portability.",
+  },
+  {
+    title: "Budget Phones vs Flagship Phones",
+    slug: "budget-vs-flagship-phones",
+    description: "Is flagship really worth the extra money?",
+  },
+  {
+    title: "Intel vs AMD",
+    slug: "intel-vs-amd",
+    description: "CPU performance comparison for gaming and work.",
+  },
+  {
+    title: "Windows vs Mac",
+    slug: "windows-vs-mac",
+    description: "Which ecosystem suits you better?",
+  },
+];
 
 export default function ComparePage() {
-  const [products, setProducts] = useState<any[]>([]);
-  const [selected, setSelected] = useState<any[]>([]);
-
-  useEffect(() => {
-    fetch("/api/products")
-      .then((res) => res.json())
-      .then((data) => setProducts(data));
-  }, []);
-
-  const toggleSelect = (product: any) => {
-    if (selected.find((p) => p.id === product.id)) {
-      setSelected(selected.filter((p) => p.id !== product.id));
-    } else {
-      if (selected.length < 2) {
-        setSelected([...selected, product]);
-      }
-    }
-  };
-
   return (
-    <div style={{ padding: 20 }}>
-      <h1>Compare Products</h1>
+    <main className="max-w-6xl mx-auto p-6">
+      <h1 className="text-4xl font-bold mb-3">
+        Product Comparisons
+      </h1>
 
-      <h3>Select 2 products</h3>
+      <p className="text-gray-600 mb-8">
+        Explore detailed comparisons to choose the best product for your needs.
+      </p>
 
-      <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-        {products.map((p) => (
-          <div
-            key={p.id}
-            onClick={() => toggleSelect(p)}
-            style={{
-              border: "1px solid gray",
-              padding: 10,
-              cursor: "pointer",
-              background: selected.find((s) => s.id === p.id)
-                ? "#d1fae5"
-                : "white",
-            }}
-          >
-            <b>{p.name}</b>
-            <p>₹{p.price}</p>
+      <div className="grid md:grid-cols-2 gap-6">
+        {comparisons.map((item) => (
+          <div key={item.slug} className="border rounded-lg p-5">
+            <h2 className="text-xl font-semibold mb-2">
+              {item.title}
+            </h2>
+
+            <p className="text-gray-600 mb-4">
+              {item.description}
+            </p>
+
+            <Link
+              href={`/compare/${item.slug}`}
+              className="text-blue-600 font-medium"
+            >
+              View Comparison →
+            </Link>
           </div>
         ))}
       </div>
-
-      {selected.length === 2 && (
-        <>
-          <h2>Comparison</h2>
-
-          <table border={1} cellPadding={10}>
-            <thead>
-              <tr>
-                <th>Feature</th>
-                <th>{selected[0].name}</th>
-                <th>{selected[1].name}</th>
-              </tr>
-            </thead>
-
-            <tbody>
-              <tr>
-                <td>Price</td>
-                <td>₹{selected[0].price}</td>
-                <td>₹{selected[1].price}</td>
-              </tr>
-
-              <tr>
-                <td>Category</td>
-                <td>{selected[0].category}</td>
-                <td>{selected[1].category}</td>
-              </tr>
-
-              <tr>
-                <td>RAM</td>
-                <td>{selected[0].specs?.ram}</td>
-                <td>{selected[1].specs?.ram}</td>
-              </tr>
-
-              <tr>
-                <td>Storage</td>
-                <td>{selected[0].specs?.storage}</td>
-                <td>{selected[1].specs?.storage}</td>
-              </tr>
-            </tbody>
-          </table>
-        </>
-      )}
-    </div>
+    </main>
   );
 }

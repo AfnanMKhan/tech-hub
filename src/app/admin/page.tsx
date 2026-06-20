@@ -1,97 +1,67 @@
-"use client";
+import { supabase } from "@/lib/supabaseClient";
 
-import { useEffect, useState } from "react";
+export default async function AdminPage() {
+  const { data: clicks } = await supabase
+    .from("clicks")
+    .select("*");
 
-export default function AdminPage() {
-  const [products, setProducts] = useState<any[]>([]);
-  const [editId, setEditId] = useState<string | null>(null);
+  const totalClicks = clicks?.length ?? 0;
 
-  const [form, setForm] = useState({
-    name: "",
-    price: "",
-    category: "",
-    image: "",
+  const grouped: Record<string, number> = {};
+
+  clicks?.forEach((click) => {
+    grouped[click.product_id] =
+      (grouped[click.product_id] || 0) + 1;
   });
 
-  const fetchProducts = async () => {
-    const res = await fetch("/api/products");
-    const data = await res.json();
-    setProducts(data);
-  };
+  const leaderboard = Object.entries(grouped)
+    .sort((a, b) => b[1] - a[1]);
 
-  useEffect(() => {
-    fetchProducts();
-  }, []);
-
-  const handleChange = (e: any) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async () => {
-    const method = editId ? "PUT" : "POST";
-
-    await fetch("/api/products", {
-      method,
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        id: editId,
-        ...form,
-        price: Number(form.price),
-      }),
-    });
-
-    setForm({ name: "", price: "", category: "", image: "" });
-    setEditId(null);
-    fetchProducts();
-  };
-
-  const handleEdit = (p: any) => {
-    setEditId(p.id);
-    setForm({
-      name: p.name,
-      price: p.price,
-      category: p.category,
-      image: p.image,
-    });
-  };
-
-  const deleteProduct = async (id: string) => {
-    await fetch(`/api/products?id=${id}`, { method: "DELETE" });
-    fetchProducts();
-  };
+  const estimatedRevenue = totalClicks * 5;
 
   return (
-    <div style={{ padding: 20 }}>
-      <h1>Admin Panel</h1>
+    <main className="max-w-5xl mx-auto p-6">
+      <h1 className="text-4xl font-bold mb-8">
+        Admin Dashboard
+      </h1>
 
-      <h2>{editId ? "Edit Product" : "Add Product"}</h2>
-
-      <input name="name" value={form.name} onChange={handleChange} placeholder="Name" />
-      <input name="price" value={form.price} onChange={handleChange} placeholder="Price" />
-      <input name="category" value={form.category} onChange={handleChange} placeholder="Category" />
-      <input name="image" value={form.image} onChange={handleChange} placeholder="Image URL" />
-
-      <button onClick={handleSubmit}>
-        {editId ? "Update" : "Add"}
-      </button>
-
-      <hr />
-
-      <h2>Products</h2>
-
-      {products.map((p) => (
-        <div key={p.id} style={{ marginBottom: 10 }}>
-          <b>{p.name}</b> - ₹{p.price}
-
-          <button onClick={() => handleEdit(p)} style={{ marginLeft: 10 }}>
-            Edit
-          </button>
-
-          <button onClick={() => deleteProduct(p.id)} style={{ marginLeft: 10 }}>
-            Delete
-          </button>
+      <div className="grid md:grid-cols-3 gap-4">
+        <div className="border rounded-lg p-4">
+          <h2>Total Clicks</h2>
+          <p className="text-3xl font-bold">
+            {totalClicks}
+          </p>
         </div>
-      ))}
-    </div>
+
+        <div className="border rounded-lg p-4">
+          <h2>Estimated Revenue</h2>
+          <p className="text-3xl font-bold">
+            ₹{estimatedRevenue}
+          </p>
+        </div>
+
+        <div className="border rounded-lg p-4">
+          <h2>Products Clicked</h2>
+          <p className="text-3xl font-bold">
+            {leaderboard.length}
+          </p>
+        </div>
+      </div>
+
+      <div className="mt-10">
+        <h2 className="text-2xl font-semibold mb-4">
+          Top Products
+        </h2>
+
+        {leaderboard.map(([productId, count]) => (
+          <div
+            key={productId}
+            className="border rounded p-3 mb-2"
+          >
+            Product #{productId} — {count} clicks
+          </div>
+        ))}
+      </div>
+    </main>
   );
 }

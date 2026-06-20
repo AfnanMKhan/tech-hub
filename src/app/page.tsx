@@ -1,86 +1,37 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import Link from "next/link";
 
 export default function Home() {
-  const [products, setProducts] = useState<any[]>([]);
-  const [filtered, setFiltered] = useState<any[]>([]);
-  const [category, setCategory] = useState("all");
-  const [search, setSearch] = useState("");
-
-  useEffect(() => {
-    fetch("/api/products")
-      .then((res) => res.json())
-      .then((data) => {
-        setProducts(data);
-        setFiltered(data);
-      });
-  }, []);
-
-  const applyFilters = (cat = category, text = search) => {
-    let result = products;
-
-    if (cat !== "all") {
-      result = result.filter((p) => p.category === cat);
-    }
-
-    if (text.trim() !== "") {
-      result = result.filter((p) =>
-        p.name.toLowerCase().includes(text.toLowerCase())
-      );
-    }
-
-    setFiltered(result);
-  };
-
-  const handleCategory = (cat: string) => {
-    setCategory(cat);
-    applyFilters(cat, search);
-  };
-
-  const handleSearch = (text: string) => {
-    setSearch(text);
-    applyFilters(category, text);
-  };
-
   return (
-    <div style={{ padding: 20 }}>
-      <h1>Tech Compare Hub</h1>
+    <main style={{ maxWidth: 900, margin: "auto", padding: 20 }}>
+      <h1>Best Tech Products 2026</h1>
 
-      <Link href="/compare">
-        <button>Go to Compare</button>
-      </Link>
+      <p>
+        Find the best smartphones, laptops, and gadgets with detailed reviews,
+        comparisons, and buying guides.
+      </p>
 
-      <hr />
+      <h2>🔥 Top Categories</h2>
 
-      {/* Search */}
-      <input
-        placeholder="Search products..."
-        value={search}
-        onChange={(e) => handleSearch(e.target.value)}
-        style={{ padding: 8, marginBottom: 10 }}
-      />
+      <ul>
+        <li><Link href="/blog/best-phone-under-20000">Best Phones Under 20000</Link></li>
+        <li><Link href="/blog/best-gaming-phone-under-30000">Best Gaming Phones</Link></li>
+        <li><Link href="/blog/iphone-15-review">iPhone 15 Review</Link></li>
+        <li><Link href="/blog/samsung-s24-review">Samsung S24 Review</Link></li>
+        <li><Link href="/blog/iphone-vs-samsung">iPhone vs Samsung</Link></li>
+      </ul>
 
-      {/* Filters */}
-      <div>
-        <button onClick={() => handleCategory("all")}>All</button>
-        <button onClick={() => handleCategory("mobile")}>Mobile</button>
-        <button onClick={() => handleCategory("laptop")}>Laptop</button>
-      </div>
+      <h2>📊 Why Trust Us?</h2>
+      <p>
+        We compare real specifications, performance, and pricing to help you
+        choose the best product for your budget.
+      </p>
 
-      <h2>Products</h2>
-
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 10 }}>
-        {filtered.map((p) => (
-          <div key={p.id} style={{ border: "1px solid #ccc", padding: 10 }}>
-            <img src={p.image} width={100} height={100} />
-            <h3>{p.name}</h3>
-            <p>₹{p.price}</p>
-            <p>{p.category}</p>
-          </div>
-        ))}
-      </div>
-    </div>
+      <h2>🚀 Latest Guides</h2>
+      <ul>
+        <li><Link href="/blog/best-phone-under-10000">Best Phones Under 10000</Link></li>
+        <li><Link href="/blog/best-camera-phone">Best Camera Phones</Link></li>
+        <li><Link href="/blog/best-battery-phone">Best Battery Phones</Link></li>
+      </ul>
+    </main>
   );
 }

@@ -1,0 +1,79 @@
+import { notFound } from "next/navigation";
+import { generateAIBlog } from "@/lib/aiBlogs";
+
+type Product = {
+  id: string;
+  name: string;
+  price: number;
+  rating: number;
+  category?: string;
+};
+
+async function getProducts(): Promise<Product[]> {
+  const res = await fetch("http://localhost:3000/api/products", {
+    cache: "no-store",
+  });
+
+  return res.json();
+}
+
+/* 🔥 SEO FIX (ADD THIS) */
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const keyword = decodeURIComponent(params.slug);
+
+  return {
+    title: `${keyword} - Best Guide 2026`,
+    description: `Find the best ${keyword} with reviews, comparisons and buying guide.`,
+  };
+}
+
+export default async function BlogPage({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const keyword = decodeURIComponent(params.slug);
+
+  const products = await getProducts();
+
+  if (!products.length) return notFound();
+
+  const filteredProducts = products.filter((p) => {
+    const text = `${p.name} ${p.category}`.toLowerCase();
+    return text.includes(keyword.toLowerCase());
+  });
+
+  const topProducts =
+    filteredProducts.length > 0
+      ? filteredProducts.slice(0, 2)
+      : products.slice(0, 2);
+
+  const productsHtml = topProducts
+    .map(
+      (p) => `
+        <div style="border:1px solid #ddd;padding:10px;margin:10px 0;">
+          <h3>${p.name}</h3>
+          <p>₹${p.price}</p>
+          <p>⭐ ${p.rating}</p>
+          <a href="/buy/${p.id}">Buy Now</a>
+        </div>
+      `
+    )
+    .join("");
+
+  const dynamicKeyword = keyword
+    .replace(/-/g, " ")
+    .toLowerCase();
+
+  const content = await generateAIBlog(dynamicKeyword, productsHtml);
+
+  return (
+    <main style={{ maxWidth: 800, margin: "auto", padding: 20 }}>
+      <div dangerouslySetInnerHTML={{ __html: content }} />
+    </main>
+  );
+}
