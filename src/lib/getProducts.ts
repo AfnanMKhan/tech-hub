@@ -1,6 +1,6 @@
 export async function getProducts() {
   const res = await fetch(
-  `${process.env.NEXT_PUBLIC_SITE_URL}/api/products`,
+  "/api/products",
   {
     cache: "no-store",
   }
