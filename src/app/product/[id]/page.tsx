@@ -1,7 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import ProductSchema from "@/components/ProductSchema";
-import { getProductById } from "@/lib/products";
 
 type Product = {
   id: string;
@@ -20,7 +19,16 @@ type Product = {
 };
 
 async function getProduct(id: string): Promise<Product | null> {
-  return getProductById(id) || null;
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_SITE_URL}/api/products`,
+    {
+      cache: "no-store",
+    }
+  );
+
+  const products = await res.json();
+
+  return products.find((p: Product) => p.id === id) || null;
 }
 
 export async function generateMetadata({
