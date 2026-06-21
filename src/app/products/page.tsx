@@ -18,11 +18,11 @@ type Product = {
 
 async function getProducts(): Promise<Product[]> {
   const res = await fetch(
-  "/api/products",
-  {
-    cache: "no-store",
-  }
-);
+    `${process.env.NEXT_PUBLIC_SITE_URL}/api/products`,
+    {
+      cache: "no-store",
+    }
+  );
 
   return res.json();
 }
