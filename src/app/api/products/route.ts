@@ -218,7 +218,7 @@ export async function GET() {
       brand: "Realme",
       price: 42999,
       rating: 4.5,
-      image: "/products/realmeGT7.jpg",
+      image: "/products/realmgtT7.jpg",
       category: "mobile",
       battery: "7000mAh",
       camera: "50MP",
