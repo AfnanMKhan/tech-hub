@@ -86,35 +86,12 @@ export default async function ProductPage({
 
       {/* Product Image */}
       <div>
-        <ProductGallery
-  images={[
-    product.image,
-    ...(product.images || []),
-  ].filter(Boolean) as string[]}
-/>
-  <div
-    style={{
-      display: "flex",
-      gap: 10,
-      overflowX: "auto",
-      marginTop: 15,
-    }}
-  >
-    {product.images?.map((img, index) => (
-      <img
-        key={index}
-        src={img}
-        alt={`${product.name}-${index}`}
-        style={{
-          width: 100,
-          height: 100,
-          objectFit: "cover",
-          borderRadius: 8,
-          border: "1px solid #ddd",
-        }}
-      />
-    ))}
-  </div>
+  <ProductGallery
+    images={[
+      product.image,
+      ...(product.images || []),
+    ].filter(Boolean) as string[]}
+  />
 </div>
 
       {/* Title */}
