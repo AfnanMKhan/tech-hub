@@ -10,9 +10,9 @@ export async function GET() {
       rating: 4.6,
       image: "/products/iphone15/iphone15.jpg",
        images: [
-    "/products/iphone15/1.jpg",
     "/products/iphone15/2.jpg",
     "/products/iphone15/3.jpg",
+    "/products/iphone15/4.jpg",
   ],
       category: "mobile",
       battery: "3349mAh",
@@ -56,9 +56,9 @@ export async function GET() {
       rating: 4.7,
       image: "/products/oneplus13/oneplus13.jpg",
       images: [
-  "/products/oneplus13/1.jpg",
   "/products/oneplus13/2.jpg",
-  "/products/oneplus13/3.jpg"
+  "/products/oneplus13/3.jpg",
+  "/products/oneplus13/4.jpg"
 ],
       category: "mobile",
       battery: "6000mAh",
@@ -309,9 +309,9 @@ export async function GET() {
       rating: 4.7,
       image: "/products/oneplus12/oneplus12.jpg",
       images: [
-  "/products/oneplus12/1.jpg",
   "/products/oneplus12/2.jpg",
-  "/products/oneplus12/3.jpg"
+  "/products/oneplus12/3.jpg",
+  "/products/oneplus12/4.jpg"
 ],
       category: "mobile",
       battery: "5400mAh",
@@ -378,9 +378,9 @@ export async function GET() {
       rating: 4.6,
       image: "/products/iqoo13/iqoo13.jpg",
       images: [
-  "/products/iqoo13/1.jpg",
   "/products/iqoo13/2.jpg",
-  "/products/iqoo13/3.jpg"
+  "/products/iqoo13/3.jpg",
+  "/products/iqoo13/4.jpg"
 ],
       category: "mobile",
       battery: "6000mAh",
@@ -447,9 +447,9 @@ export async function GET() {
       rating: 4.4,
       image: "/products/hpomen/hpomen.jpg",
       images: [
-  "/products/hpomen/1.jpg",
   "/products/hpomen/2.jpg",
-  "/products/hpomen/3.jpg"
+  "/products/hpomen/3.jpg",
+  "/products/hpomen/4.jpg"
 ],
       category: "laptop",
       battery: "83Wh",
