@@ -7,6 +7,7 @@ type Product = {
   name: string;
   brand?: string;
   image?: string;
+  images?: string[];
   category?: string;
 
   price: number;
@@ -82,16 +83,43 @@ export default async function ProductPage({
       <ProductSchema product={product} />
 
       {/* Product Image */}
+      <div>
+  <img
+    src={product.image}
+    alt={product.name}
+    style={{
+      width: "100%",
+      maxHeight: 500,
+      objectFit: "contain",
+      borderRadius: 12,
+      background: "#fff",
+    }}
+  />
+
+  <div
+    style={{
+      display: "flex",
+      gap: 10,
+      overflowX: "auto",
+      marginTop: 15,
+    }}
+  >
+    {product.images?.map((img, index) => (
       <img
-        src={product.image}
-        alt={product.name}
+        key={index}
+        src={img}
+        alt={`${product.name}-${index}`}
         style={{
-          width: "100%",
-          maxHeight: 400,
+          width: 100,
+          height: 100,
           objectFit: "cover",
-          borderRadius: 12,
+          borderRadius: 8,
+          border: "1px solid #ddd",
         }}
       />
+    ))}
+  </div>
+</div>
 
       {/* Title */}
       <h1 style={{ marginTop: 20 }}>{product.name}</h1>
@@ -108,65 +136,67 @@ export default async function ProductPage({
 
       {/* Buy Button */}
       <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          gap: 10,
-          marginTop: 20,
-        }}
-      >
-        {product.amazon && (
-          <a
-            href={product.amazon}
-            target="_blank"
-            style={{
-              background: "#ff9900",
-              color: "white",
-              padding: 12,
-              borderRadius: 8,
-              textDecoration: "none",
-              fontWeight: "bold",
-            }}
-          >
-            🛒 Buy on Amazon
-          </a>
-        )}
+  style={{
+    display: "flex",
+    gap: 12,
+    flexWrap: "wrap",
+    marginTop: 20,
+  }}
+>
+  {product.amazon && (
+    <a
+      href={product.amazon}
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        background: "#ff9900",
+        color: "white",
+        padding: "12px 20px",
+        borderRadius: 8,
+        textDecoration: "none",
+        fontWeight: "bold",
+      }}
+    >
+      Buy on Amazon
+    </a>
+  )}
 
-        {product.flipkart && (
-          <a
-            href={product.flipkart}
-            target="_blank"
-            style={{
-              background: "#ffe500",
-              color: "#2874f0",
-              padding: 12,
-              borderRadius: 8,
-              textDecoration: "none",
-              fontWeight: "bold",
-            }}
-          >
-            🛍 Buy on Flipkart
-          </a>
-        )}
+  {product.flipkart && (
+    <a
+      href={product.flipkart}
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        background: "#2874f0",
+        color: "white",
+        padding: "12px 20px",
+        borderRadius: 8,
+        textDecoration: "none",
+        fontWeight: "bold",
+      }}
+    >
+      Buy on Flipkart
+    </a>
+  )}
 
-        {product.official && (
-          <a
-            href={product.official}
-            target="_blank"
-            style={{
-              background: "#111",
-              color: "white",
-              padding: 12,
-              borderRadius: 8,
-              textDecoration: "none",
-              fontWeight: "bold",
-            }}
-          >
-            🌐 Official Website
-          </a>
-        )}
-      </div>
-
+  {product.official && (
+    <a
+      href={product.official}
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        background: "#111",
+        color: "white",
+        padding: "12px 20px",
+        borderRadius: 8,
+        textDecoration: "none",
+        fontWeight: "bold",
+      }}
+    >
+      Official Website
+    </a>
+  )}
+</div>
       <hr style={{ margin: "30px 0" }} />
 
       {/* Specs */}
