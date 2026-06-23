@@ -22,7 +22,7 @@ export async function GET() {
 
       amazon: "https://www.amazon.in/Apple-iPhone-15-128-GB/dp/B0CHX1W1XY",
       flipkart: "https://www.flipkart.com/apple-iphone-15-black-128-gb/p/itm6ac6485515ae4?pid=MOBGTAGPTB3VS24W&marketplace=FLIPKART&lid=LSTMOBGTAGPTB3VS24WKFODHL&pageUID=1782151450198",
-      Apple: "https://www.apple.com/in/iphone-15/"
+      official: "https://www.apple.com/in/iphone-15/"
     },
 
     {

@@ -1,13 +1,15 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import ProductSchema from "@/components/ProductSchema";
+import ProductGallery from "@/components/ProductGallery";
 
 type Product = {
   id: string;
   name: string;
   brand?: string;
-  image?: string;
+   image: string; // remove ?
   images?: string[];
+
   category?: string;
 
   price: number;
@@ -84,18 +86,9 @@ export default async function ProductPage({
 
       {/* Product Image */}
       <div>
-  <img
-    src={product.image}
-    alt={product.name}
-    style={{
-      width: "100%",
-      maxHeight: 500,
-      objectFit: "contain",
-      borderRadius: 12,
-      background: "#fff",
-    }}
-  />
-
+  <ProductGallery
+  images={product.images || [product.image]}
+/>
   <div
     style={{
       display: "flex",
