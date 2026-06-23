@@ -16,6 +16,17 @@ type Product = {
   camera?: string;
   display?: string;
   processor?: string;
+
+  highlights?: string[];
+
+  amazon?: string;
+  flipkart?: string;
+  official?: string;
+
+  specifications?: Record<
+    string,
+    Record<string, string>
+  >;
 };
 
 async function getProduct(id: string): Promise<Product | null> {
@@ -96,50 +107,178 @@ export default async function ProductPage({
       </p>
 
       {/* Buy Button */}
-      <div style={{ marginTop: 20 }}>
-        <Link
-          href={`/buy/${product.id}`}
-          style={{
-            background: "black",
-            color: "white",
-            padding: "12px 20px",
-            borderRadius: 8,
-            textDecoration: "none",
-            display: "inline-block",
-          }}
-        >
-          Buy Now
-        </Link>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: 10,
+          marginTop: 20,
+        }}
+      >
+        {product.amazon && (
+          <a
+            href={product.amazon}
+            target="_blank"
+            style={{
+              background: "#ff9900",
+              color: "white",
+              padding: 12,
+              borderRadius: 8,
+              textDecoration: "none",
+              fontWeight: "bold",
+            }}
+          >
+            🛒 Buy on Amazon
+          </a>
+        )}
+
+        {product.flipkart && (
+          <a
+            href={product.flipkart}
+            target="_blank"
+            style={{
+              background: "#ffe500",
+              color: "#2874f0",
+              padding: 12,
+              borderRadius: 8,
+              textDecoration: "none",
+              fontWeight: "bold",
+            }}
+          >
+            🛍 Buy on Flipkart
+          </a>
+        )}
+
+        {product.official && (
+          <a
+            href={product.official}
+            target="_blank"
+            style={{
+              background: "#111",
+              color: "white",
+              padding: 12,
+              borderRadius: 8,
+              textDecoration: "none",
+              fontWeight: "bold",
+            }}
+          >
+            🌐 Official Website
+          </a>
+        )}
       </div>
 
       <hr style={{ margin: "30px 0" }} />
 
       {/* Specs */}
-      <h2>Specifications</h2>
+      <h2>Highlights</h2>
+
       <ul>
-        <li>Display: {product.display}</li>
-        <li>Processor: {product.processor}</li>
-        <li>Camera: {product.camera}</li>
-        <li>Battery: {product.battery}</li>
+        {product.highlights?.map((item, index) => (
+          <li key={index}>✅ {item}</li>
+        ))}
       </ul>
 
       <hr style={{ margin: "30px 0" }} />
 
+      <h2>Key Specifications</h2>
+
+      <table
+        style={{
+          width: "100%",
+          borderCollapse: "collapse",
+        }}
+      >
+        <tbody>
+          <tr>
+            <td style={{ border: "1px solid #ddd", padding: 10 }}>
+              Display
+            </td>
+            <td style={{ border: "1px solid #ddd", padding: 10 }}>
+              {product.display}
+            </td>
+          </tr>
+
+          <tr>
+            <td style={{ border: "1px solid #ddd", padding: 10 }}>
+              Processor
+            </td>
+            <td style={{ border: "1px solid #ddd", padding: 10 }}>
+              {product.processor}
+            </td>
+          </tr>
+
+          <tr>
+            <td style={{ border: "1px solid #ddd", padding: 10 }}>
+              Camera
+            </td>
+            <td style={{ border: "1px solid #ddd", padding: 10 }}>
+              {product.camera}
+            </td>
+          </tr>
+
+          <tr>
+            <td style={{ border: "1px solid #ddd", padding: 10 }}>
+              Battery
+            </td>
+            <td style={{ border: "1px solid #ddd", padding: 10 }}>
+              {product.battery}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr style={{ margin: "30px 0" }} />
+
       {/* SEO Content Block */}
-      <section>
-        <h2>Is {product.name} Worth Buying?</h2>
+      {product.specifications && (
+  <>
+    <hr style={{ margin: "30px 0" }} />
 
-        <p>
-          The {product.name} is one of the top-rated{" "}
-          {product.category} products in its segment, offering balanced
-          performance, design, and value for money.
-        </p>
+    <h2>Detailed Specifications</h2>
 
-        <p>
-          If you're looking for a reliable {product.category}, this model
-          is worth considering based on its specifications and user feedback.
-        </p>
-      </section>
+    {Object.entries(product.specifications).map(
+      ([section, specs]) => (
+        <div key={section} style={{ marginBottom: 25 }}>
+          <h3>{section}</h3>
+
+          <table
+            style={{
+              width: "100%",
+              borderCollapse: "collapse",
+            }}
+          >
+            <tbody>
+              {Object.entries(specs).map(
+                ([key, value]) => (
+                  <tr key={key}>
+                    <td
+                      style={{
+                        border: "1px solid #ddd",
+                        padding: 10,
+                        fontWeight: "bold",
+                      }}
+                    >
+                      {key}
+                    </td>
+
+                    <td
+                      style={{
+                        border: "1px solid #ddd",
+                        padding: 10,
+                      }}
+                    >
+                      {value}
+                    </td>
+                  </tr>
+                )
+              )}
+            </tbody>
+          </table>
+        </div>
+      )
+    )}
+  </>
+)}
 
       <hr style={{ margin: "30px 0" }} />
 
