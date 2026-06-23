@@ -8,7 +8,7 @@ export async function GET() {
       brand: "Apple",
       price: 79999,
       rating: 4.6,
-      image: "/products/iphone15.jpg",
+      image: "/products/iphone15/iphone15.jpg",
        images: [
     "/products/iphone15/1.jpg",
     "/products/iphone15/2.jpg",
@@ -31,9 +31,8 @@ export async function GET() {
       brand: "Samsung",
       price: 69999,
       rating: 4.5,
-      image: "/products/s24.jpg",
+      image: "/products/s24/s24.jpg",
       images: [
-  "/products/s24/1.jpg",
   "/products/s24/2.jpg",
   "/products/s24/3.jpg",
   "/products/s24/4.jpg"
@@ -55,12 +54,11 @@ export async function GET() {
       brand: "OnePlus",
       price: 64999,
       rating: 4.7,
-      image: "/products/oneplus13.jpg",
+      image: "/products/oneplus13/oneplus13.jpg",
       images: [
   "/products/oneplus13/1.jpg",
   "/products/oneplus13/2.jpg",
-  "/products/oneplus13/3.jpg",
-  "/products/oneplus13/4.jpg"
+  "/products/oneplus13/3.jpg"
 ],
       category: "mobile",
       battery: "6000mAh",
@@ -79,9 +77,8 @@ export async function GET() {
       brand: "Google",
       price: 74999,
       rating: 4.6,
-      image: "/products/pixel9.jpg",
+      image: "/products/pixel9/pixel9.jpg",
       images: [
-  "/products/pixel9/1.jpg",
   "/products/pixel9/2.jpg",
   "/products/pixel9/3.jpg",
   "/products/pixel9/4.jpg"
@@ -103,9 +100,8 @@ export async function GET() {
       brand: "Nothing",
       price: 49999,
       rating: 4.4,
-      image: "/products/nothing3.jpg",
+      image: "/products/nothing3/nothing3.jpg",
       images: [
-  "/products/nothing3/1.jpg",
   "/products/nothing3/2.jpg",
   "/products/nothing3/3.jpg",
   "/products/nothing3/4.jpg"
@@ -127,9 +123,8 @@ export async function GET() {
       brand: "Apple",
       price: 114999,
       rating: 4.8,
-      image: "/products/macbookairm4.jpg",
+      image: "/products/macbookairm4/macbookairm4.jpg",
       images: [
-  "/products/macbookairm4/1.jpg",
   "/products/macbookairm4/2.jpg",
   "/products/macbookairm4/3.jpg",
   "/products/macbookairm4/4.jpg"
@@ -151,9 +146,8 @@ export async function GET() {
       brand: "ASUS",
       price: 169999,
       rating: 4.7,
-      image: "/products/asusrog.jpg",
+      image: "/products/asusrog/asusrog.jpg",
       images: [
-  "/products/asusrog/1.jpg",
   "/products/asusrog/2.jpg",
   "/products/asusrog/3.jpg",
   "/products/asusrog/4.jpg"
@@ -175,9 +169,8 @@ export async function GET() {
       brand: "Lenovo",
       price: 159999,
       rating: 4.6,
-      image: "/products/lenovolegion.jpg",
+      image: "/products/lenovolegion/lenovolegion.jpg",
       images: [
-  "/products/lenovolegion/1.jpg",
   "/products/lenovolegion/2.jpg",
   "/products/lenovolegion/3.jpg",
   "/products/lenovolegion/4.jpg"
@@ -199,9 +192,8 @@ export async function GET() {
       brand: "Dell",
       price: 149999,
       rating: 4.5,
-      image: "/products/dellxps14.jpg",
+      image: "/products/dellxps14/dellxps14.jpg",
       images: [
-  "/products/dellxps14/1.jpg",
   "/products/dellxps14/2.jpg",
   "/products/dellxps14/3.jpg",
   "/products/dellxps14/4.jpg"
@@ -223,9 +215,8 @@ export async function GET() {
       brand: "Apple",
       price: 89999,
       rating: 4.8,
-      image: "/products/iphone16.jpg",
+      image: "/products/iphone16/iphone16.jpg",
       images: [
-  "/products/iphone16/1.jpg",
   "/products/iphone16/2.jpg",
   "/products/iphone16/3.jpg",
   "/products/iphone16/4.jpg"
@@ -247,9 +238,8 @@ export async function GET() {
       brand: "Apple",
       price: 129999,
       rating: 4.9,
-      image: "/products/iphone16pro.jpg",
+      image: "/products/iphone16pro/iphone16pro.jpg",
       images: [
-  "/products/iphone16pro/1.jpg",
   "/products/iphone16pro/2.jpg",
   "/products/iphone16pro/3.jpg",
   "/products/iphone16pro/4.jpg"
@@ -271,9 +261,8 @@ export async function GET() {
       brand: "Samsung",
       price: 79999,
       rating: 4.7,
-      image: "/products/galaxys25.jpg",
+      image: "/products/galaxys25/galaxys25.jpg",
       images: [
-  "/products/galaxys25/1.jpg",
   "/products/galaxys25/2.jpg",
   "/products/galaxys25/3.jpg",
   "/products/galaxys25/4.jpg"
@@ -295,9 +284,8 @@ export async function GET() {
       brand: "Samsung",
       price: 134999,
       rating: 4.9,
-      image: "/products/galaxys25ultra.jpg",
+      image: "/products/galaxys25ultra/galaxys25ultra.jpg",
       images: [
-  "/products/galaxys25ultra/1.jpg",
   "/products/galaxys25ultra/2.jpg",
   "/products/galaxys25ultra/3.jpg",
   "/products/galaxys25ultra/4.jpg"
@@ -319,12 +307,11 @@ export async function GET() {
       brand: "OnePlus",
       price: 59999,
       rating: 4.7,
-      image: "/products/oneplus12.jpg",
+      image: "/products/oneplus12/oneplus12.jpg",
       images: [
   "/products/oneplus12/1.jpg",
   "/products/oneplus12/2.jpg",
-  "/products/oneplus12/3.jpg",
-  "/products/oneplus12/4.jpg"
+  "/products/oneplus12/3.jpg"
 ],
       category: "mobile",
       battery: "5400mAh",
@@ -343,12 +330,11 @@ export async function GET() {
       brand: "Xiaomi",
       price: 64999,
       rating: 4.6,
-      image: "/products/xiaomi15.jpg",
+      image: "/products/xiaomi15/xiaomi15.jpg",
       images: [
   "/products/xiaomi15/1.jpg",
   "/products/xiaomi15/2.jpg",
-  "/products/xiaomi15/3.jpg",
-  "/products/xiaomi15/4.jpg"
+  "/products/xiaomi15/3.jpg"
 ],
       category: "mobile",
       battery: "5400mAh",
@@ -367,12 +353,11 @@ export async function GET() {
       brand: "Realme",
       price: 42999,
       rating: 4.5,
-      image: "/products/realmegt7.jpg",
+      image: "/products/realmegt7/realmegt7.jpg",
       images: [
   "/products/realmegt7/1.jpg",
   "/products/realmegt7/2.jpg",
-  "/products/realmegt7/3.jpg",
-  "/products/realmegt7/4.jpg"
+  "/products/realmegt7/3.jpg"
 ],
       category: "mobile",
       battery: "7000mAh",
@@ -391,12 +376,11 @@ export async function GET() {
       brand: "iQOO",
       price: 54999,
       rating: 4.6,
-      image: "/products/iqoo13.jpg",
+      image: "/products/iqoo13/iqoo13.jpg",
       images: [
   "/products/iqoo13/1.jpg",
   "/products/iqoo13/2.jpg",
-  "/products/iqoo13/3.jpg",
-  "/products/iqoo13/4.jpg"
+  "/products/iqoo13/3.jpg"
 ],
       category: "mobile",
       battery: "6000mAh",
@@ -415,12 +399,11 @@ export async function GET() {
       brand: "Vivo",
       price: 69999,
       rating: 4.7,
-      image: "/products/vivox200.jpg",
+      image: "/products/vivox200/vivox200.jpg",
       images: [
   "/products/vivox200/1.jpg",
   "/products/vivox200/2.jpg",
-  "/products/vivox200/3.jpg",
-  "/products/vivox200/4.jpg"
+  "/products/vivox200/3.jpg"
 ],
       category: "mobile",
       battery: "5800mAh",
@@ -439,12 +422,11 @@ export async function GET() {
       brand: "Oppo",
       price: 69999,
       rating: 4.6,
-      image: "/products/oppofindx8.jpg",
+      image: "/products/oppofindx8/oppofindx8.jpg",
       images: [
   "/products/oppofindx8/1.jpg",
   "/products/oppofindx8/2.jpg",
-  "/products/oppofindx8/3.jpg",
-  "/products/oppofindx8/4.jpg"
+  "/products/oppofindx8/3.jpg"
 ],
       category: "mobile",
       battery: "5600mAh",
@@ -463,12 +445,11 @@ export async function GET() {
       brand: "HP",
       price: 129999,
       rating: 4.4,
-      image: "/products/hpomen.jpg",
+      image: "/products/hpomen/hpomen.jpg",
       images: [
   "/products/hpomen/1.jpg",
   "/products/hpomen/2.jpg",
-  "/products/hpomen/3.jpg",
-  "/products/hpomen/4.jpg"
+  "/products/hpomen/3.jpg"
 ],
       category: "laptop",
       battery: "83Wh",
