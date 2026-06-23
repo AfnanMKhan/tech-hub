@@ -86,9 +86,11 @@ export default async function ProductPage({
 
       {/* Product Image */}
       <div>
-        <pre>{JSON.stringify(product.images, null, 2)}</pre>
-  <ProductGallery
-  images={product.images ?? [product.image].filter(Boolean)}
+        <ProductGallery
+  images={[
+    product.image,
+    ...(product.images || []),
+  ].filter(Boolean) as string[]}
 />
   <div
     style={{
