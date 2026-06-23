@@ -10,9 +10,9 @@ export async function GET() {
       rating: 4.6,
       image: "/products/iphone15.jpg",
        images: [
-    "/products/iphone15-1.jpg",
-    "/products/iphone15-2.jpg",
-    "/products/iphone15-3.jpg",
+    "/products/iphone15/1.jpg",
+    "/products/iphone15/2.jpg",
+    "/products/iphone15/3.jpg",
   ],
       category: "mobile",
       battery: "3349mAh",

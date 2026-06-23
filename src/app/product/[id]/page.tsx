@@ -86,6 +86,7 @@ export default async function ProductPage({
 
       {/* Product Image */}
       <div>
+        <pre>{JSON.stringify(product.images, null, 2)}</pre>
   <ProductGallery
   images={product.images ?? [product.image].filter(Boolean)}
 />
