@@ -7,43 +7,45 @@ export default function ProductGallery({
 }: {
   images: string[];
 }) {
-  const [selected, setSelected] = useState(images[0]);
+  const [selectedImage, setSelectedImage] = useState(images[0]);
 
   return (
     <>
       <img
-        src={selected}
-        alt=""
+        src={selectedImage}
+        alt="Product"
         style={{
           width: "100%",
-          maxHeight: 500,
+          maxHeight: "500px",
           objectFit: "contain",
-          borderRadius: 12,
+          borderRadius: "12px",
         }}
       />
 
       <div
         style={{
           display: "flex",
-          gap: 10,
-          marginTop: 15,
+          gap: "10px",
+          marginTop: "15px",
           overflowX: "auto",
         }}
       >
-        {images.map((img) => (
+        {images.map((img, index) => (
           <img
-            key={img}
+            key={index}
             src={img}
             alt=""
-            onClick={() => setSelected(img)}
+            onClick={() => setSelectedImage(img)}
             style={{
-              width: 90,
-              height: 90,
+              width: "80px",
+              height: "80px",
+              objectFit: "cover",
               cursor: "pointer",
-              borderRadius: 8,
-              border: selected === img
-                ? "2px solid blue"
-                : "1px solid #ddd",
+              borderRadius: "8px",
+              border:
+                selectedImage === img
+                  ? "2px solid blue"
+                  : "1px solid #ddd",
             }}
           />
         ))}

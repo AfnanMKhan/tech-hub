@@ -7,7 +7,7 @@ type Product = {
   id: string;
   name: string;
   brand?: string;
-   image: string; // remove ?
+  image: string;
   images?: string[];
 
   category?: string;
@@ -87,7 +87,7 @@ export default async function ProductPage({
       {/* Product Image */}
       <div>
   <ProductGallery
-  images={product.images || [product.image]}
+  images={product.images ?? [product.image].filter(Boolean)}
 />
   <div
     style={{
