@@ -27,15 +27,15 @@ export default function Home() {
           </h1>
 
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-  Compare smartphones, laptops, gadgets and discover the best deals,
-  reviews and buying guides.
-</p>
+            Compare smartphones, laptops, gadgets and discover the best deals,
+            reviews and buying guides.
+          </p>
 
-<div className="mt-8">
-  <SearchBar />
-</div>
+          <div className="mt-8">
+            <SearchBar />
+          </div>
 
-<div className="mt-8 flex justify-center gap-4">
+          <div className="mt-8 flex justify-center gap-4">
             <Link
               href="/products"
               className="bg-black text-white px-6 py-3 rounded-lg"
