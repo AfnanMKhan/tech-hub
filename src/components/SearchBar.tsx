@@ -7,30 +7,30 @@ export default function SearchBar() {
   const [query, setQuery] = useState("");
   const router = useRouter();
 
-  const handleSearch = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!query.trim()) return;
 
-    router.push(`/search?q=${encodeURIComponent(query)}`);
+    router.push(`/search?q=${query}`);
   };
 
   return (
     <form
-      onSubmit={handleSearch}
-      className="flex w-full max-w-xl mx-auto"
+      onSubmit={handleSubmit}
+      className="flex gap-2 my-6"
     >
       <input
         type="text"
-        placeholder="Search phones, laptops..."
+        placeholder="Search products..."
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        className="flex-1 p-3 border rounded-l-lg"
+        className="border p-3 rounded-lg flex-1"
       />
 
       <button
         type="submit"
-        className="bg-black text-white px-5 rounded-r-lg"
+        className="bg-black text-white px-6 rounded-lg"
       >
         Search
       </button>
