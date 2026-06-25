@@ -123,7 +123,7 @@ export default function Home() {
 
   <div className="grid md:grid-cols-3 gap-6">
     <Link
-      href="/products/iphone-16-pro"
+      href="/products/iphone16pro"
       className="bg-white p-6 rounded-xl shadow"
     >
       <h3 className="font-bold text-xl">iPhone 16 Pro</h3>
@@ -131,7 +131,7 @@ export default function Home() {
     </Link>
 
     <Link
-      href="/products/galaxy-s25-ultra"
+      href="/products/galaxys25ultra"
       className="bg-white p-6 rounded-xl shadow"
     >
       <h3 className="font-bold text-xl">Galaxy S25 Ultra</h3>
@@ -139,7 +139,7 @@ export default function Home() {
     </Link>
 
     <Link
-      href="/products/macbook-air-m4"
+      href="/products/macbookairm4"
       className="bg-white p-6 rounded-xl shadow"
     >
       <h3 className="font-bold text-xl">MacBook Air M4</h3>
