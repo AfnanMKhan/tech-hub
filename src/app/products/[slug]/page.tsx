@@ -75,12 +75,13 @@ export default async function ProductPage({
 
   return (
     <div
-      style={{
-        padding: 20,
-        maxWidth: 900,
-        margin: "auto",
-      }}
-    >
+  style={{
+    padding: 20,
+    maxWidth: 900,
+    margin: "auto",
+    background: "#E8D6B5",
+  }}
+>
       {/* SEO Schema */}
       <ProductSchema product={product} />
 
@@ -193,7 +194,7 @@ export default async function ProductPage({
       >
         <tbody>
           <tr>
-            <td style={{ border: "1px solid #ddd", padding: 10 }}>
+            <td style={{ border: "1px solid #ddd", padding: 10, background: "#F5E6CA" }}>
               Display
             </td>
             <td style={{ border: "1px solid #ddd", padding: 10 }}>
@@ -202,7 +203,7 @@ export default async function ProductPage({
           </tr>
 
           <tr>
-            <td style={{ border: "1px solid #ddd", padding: 10 }}>
+            <td style={{ border: "1px solid #ddd", padding: 10, background: "#F5E6CA" }}>
               Processor
             </td>
             <td style={{ border: "1px solid #ddd", padding: 10 }}>
@@ -211,19 +212,19 @@ export default async function ProductPage({
           </tr>
 
           <tr>
-            <td style={{ border: "1px solid #ddd", padding: 10 }}>
+            <td style={{ border: "1px solid #ddd", padding: 10, background: "#F5E6CA" }}>
               Camera
             </td>
-            <td style={{ border: "1px solid #ddd", padding: 10 }}>
+            <td style={{ border: "1px solid #ddd", padding: 10, background: "#F5E6CA" }}>
               {product.camera}
             </td>
           </tr>
 
           <tr>
-            <td style={{ border: "1px solid #ddd", padding: 10 }}>
+            <td style={{ border: "1px solid #ddd", padding: 10, background: "#F5E6CA" }}>
               Battery
             </td>
-            <td style={{ border: "1px solid #ddd", padding: 10 }}>
+            <td style={{ border: "1px solid #ddd", padding: 10, background: "#F5E6CA" }}>
               {product.battery}
             </td>
           </tr>
@@ -257,6 +258,7 @@ export default async function ProductPage({
                     <td
                       style={{
                         border: "1px solid #ddd",
+                         background: "#F5E6CA",
                         padding: 10,
                         fontWeight: "bold",
                       }}
@@ -266,7 +268,9 @@ export default async function ProductPage({
 
                     <td
                       style={{
-                        border: "1px solid #ddd",
+                        border: "1px solid #ddd", 
+                        background: "#F5E6CA",
+
                         padding: 10,
                       }}
                     >

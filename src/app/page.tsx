@@ -132,7 +132,7 @@ export default function Home() {
 
     <Link
       href="/products/galaxys25ultra"
-      className="bg-white p-6 rounded-xl shadow"
+     className="bg-[#F5E6CA] p-6 rounded-xl shadow"
     >
       <h3 className="font-bold text-xl">Galaxy S25 Ultra</h3>
       <p className="text-gray-500">200MP Camera • S Pen</p>

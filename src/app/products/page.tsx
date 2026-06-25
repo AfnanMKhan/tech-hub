@@ -31,7 +31,7 @@ export default async function Page() {
   const products = await getProducts();
 
   return (
-    <main className="min-h-screen bg-gray-50 p-6">
+    <main className="min-h-screen bg-[#E8D6B5] p-6">
       <div className="max-w-7xl mx-auto">
         <h1 className="text-4xl font-bold mb-2">
           All Products
@@ -45,7 +45,7 @@ export default async function Page() {
           {products.map((p) => (
             <div
               key={p.id}
-              className="bg-white rounded-2xl shadow hover:shadow-xl transition overflow-hidden"
+              className="bg-[#F5E6CA] shadow hover:shadow-xl transition overflow-hidden"
             >
               <Link href={`/buy/${p.id}`}>
                 <img
