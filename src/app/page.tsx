@@ -1,5 +1,7 @@
 import Link from "next/link";
 import SearchBar from "@/components/SearchBar";
+import Header from "@/components/layout/Header";
+import Image from "next/image";
 
 export default function Home() {
   const categories = [
@@ -19,8 +21,50 @@ export default function Home() {
 ];
 
   return (
-    <main className="min-h-screen bg-gray-50">
-      <section className="bg-white border-b">
+  <>
+    <Header />
+
+    <main className="min-h-screen bg-[#E8D6B5]">
+      <section className="relative h-[650px] overflow-hidden">
+  <Image
+    src="/images/gta6-banner.jpg"
+    alt="GTA 6"
+    fill
+    priority
+    className="object-cover"
+  />
+
+  <div className="absolute inset-0 bg-black/50">
+    <div className="max-w-7xl mx-auto h-full flex items-center px-6">
+      <div className="text-white max-w-2xl">
+
+        <span className="bg-red-600 px-4 py-2 rounded-full text-sm font-bold">
+          BREAKING NEWS
+        </span>
+
+        <h1 className="text-6xl font-bold mt-6">
+          GTA VI Pre-Orders Are Live
+        </h1>
+
+        <p className="text-xl mt-6 text-gray-200">
+          Get the latest GTA 6 news, release updates,
+          gameplay details and pre-order information.
+        </p>
+
+        <a
+          href="https://www.rockstargames.com/VI"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block mt-8 bg-white text-black px-8 py-4 rounded-lg font-semibold"
+        >
+          Official GTA VI Website
+        </a>
+
+      </div>
+    </div>
+  </div>
+</section>
+      <section className="bg-[#E8D6B5] border-b border-gray-300">
         <div className="max-w-6xl mx-auto px-6 py-20 text-center">
           <h1 className="text-5xl font-bold mb-6">
             Find The Best Tech Products
@@ -63,7 +107,7 @@ export default function Home() {
             <Link
               key={cat.name}
               href={cat.href}
-              className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition"
+              className="bg-[#F5E6CA] p-6 rounded-xl shadow hover:shadow-lg transition"
             >
               <div className="text-4xl mb-3">{cat.icon}</div>
               <div className="font-semibold">{cat.name}</div>
@@ -114,7 +158,7 @@ export default function Home() {
             <Link
               key={guide}
               href={`/blog/${guide}`}
-              className="bg-white p-5 rounded-xl shadow hover:shadow-lg transition"
+              className="bg-[#F5E6CA] p-5 rounded-xl shadow hover:shadow-lg transition"
             >
               <h3 className="font-semibold text-lg">
                 {guide.replace(/-/g, " ")}
@@ -175,5 +219,6 @@ export default function Home() {
         </div>
       </section>
     </main>
+</>
   );
 }
