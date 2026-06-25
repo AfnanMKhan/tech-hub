@@ -9,14 +9,14 @@ export default function Home() {
     { name: "Budget", href: "/best-for/budget", icon: "💰" },
   ];
 
-  const guides = [
-    "best-phone-under-20000",
-    "best-gaming-phone-under-30000",
-    "iphone-15-review",
-    "samsung-s24-review",
-    "best-camera-phone",
-    "best-battery-phone",
-  ];
+ const guides = [
+  "best-phone-under-20000",
+  "best-phone-under-30000",
+  "iphone-16-pro-review",
+  "galaxy-s25-ultra-review",
+  "best-gaming-laptop-2026",
+  "gta-6-pre-order-guide"
+];
 
   return (
     <main className="min-h-screen bg-gray-50">
@@ -73,6 +73,38 @@ export default function Home() {
       </section>
 
       <section className="max-w-6xl mx-auto px-6 py-14">
+  <h2 className="text-3xl font-bold mb-8">
+    Featured Products
+  </h2>
+
+  <div className="grid md:grid-cols-3 gap-6">
+    <Link
+      href="/products/iphone-16-pro"
+      className="bg-white p-6 rounded-xl shadow"
+    >
+      <h3 className="font-bold text-xl">iPhone 16 Pro</h3>
+      <p className="text-gray-500">A18 Pro • 48MP Camera</p>
+    </Link>
+
+    <Link
+      href="/products/galaxy-s25-ultra"
+      className="bg-white p-6 rounded-xl shadow"
+    >
+      <h3 className="font-bold text-xl">Galaxy S25 Ultra</h3>
+      <p className="text-gray-500">200MP Camera • S Pen</p>
+    </Link>
+
+    <Link
+      href="/products/macbook-air-m4"
+      className="bg-white p-6 rounded-xl shadow"
+    >
+      <h3 className="font-bold text-xl">MacBook Air M4</h3>
+      <p className="text-gray-500">Apple M4 • 18 Hours Battery</p>
+    </Link>
+  </div>
+</section>
+
+      <section className="max-w-6xl mx-auto px-6 py-14">
         <h2 className="text-3xl font-bold mb-8">
           Buying Guides
         </h2>
@@ -95,6 +127,39 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      <section className="max-w-6xl mx-auto px-6 py-14">
+  <h2 className="text-3xl font-bold mb-8">
+    Trending Tech News
+  </h2>
+
+  <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+    <div className="p-8">
+      <span className="bg-red-500 text-white px-3 py-1 rounded-full text-sm">
+        Breaking News
+      </span>
+
+      <h3 className="text-3xl font-bold mt-4">
+        GTA 6 Pre-Orders Open This Week
+      </h3>
+
+      <p className="text-gray-600 mt-4">
+        Rockstar Games has confirmed that GTA VI pre-orders begin
+        on June 25. The game launches on November 19 for PS5 and
+        Xbox Series X/S.
+      </p>
+
+      <a
+        href="https://www.rockstargames.com/VI"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block mt-6 bg-black text-white px-6 py-3 rounded-lg"
+      >
+        View Official GTA VI Page
+      </a>
+    </div>
+  </div>
+</section>
 
       <section className="max-w-6xl mx-auto px-6 py-14">
         <div className="bg-black text-white rounded-2xl p-10 text-center">
