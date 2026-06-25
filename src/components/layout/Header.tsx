@@ -1,10 +1,13 @@
 import Link from "next/link";
 import SearchBar from "@/components/SearchBar";
+import NavButtons from "@/components/NavButtons";
+import HeaderNavigation from "@/components/HeaderNavigation";
 
 export default function Header() {
   return (
     <header className="bg-[#F5E6CA] border-b border-gray-300 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center gap-6">
+         <NavButtons />
 
         <Link
           href="/"
@@ -13,7 +16,10 @@ export default function Header() {
           Tech Hub
         </Link>
 
+      
+
         <nav className="hidden lg:flex gap-6 font-medium text-gray-800">
+           <HeaderNavigation />
 
   <Link
     href="/products"
