@@ -1,6 +1,5 @@
 import Link from "next/link";
 import SearchBar from "@/components/SearchBar";
-import HeaderNavigation from "@/components/HeaderNavigation";
 
 export default function Header() {
   return (
@@ -11,12 +10,10 @@ export default function Header() {
        <div className="flex flex-col items-start min-w-fit">
   <Link
     href="/"
-    className="bg-black text-[#E8D6B5] px-3 py-2 rounded-lg text-lg font-bold"
+    className="bg-black text-[#E8D6B5] px-4 py-2 rounded-lg text-2xl font-bold whitespace-nowrap"
   >
     Tech Hub
   </Link>
-
-  <HeaderNavigation />
 </div>
       
 

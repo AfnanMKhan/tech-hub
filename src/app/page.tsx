@@ -22,7 +22,6 @@ export default function Home() {
 
   return (
   <>
-    <Header />
 
     <main className="min-h-screen bg-[#E8D6B5]">
       <section className="relative h-[650px] overflow-hidden">
