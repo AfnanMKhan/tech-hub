@@ -22,7 +22,6 @@ export default function Header() {
       
 
         <nav className="hidden lg:flex gap-6 font-medium text-gray-800">
-           <HeaderNavigation />
 
   <Link
     href="/products"
