@@ -8,20 +8,19 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center gap-6">
       
 
-        <div className="flex flex-col items-start">
+       <div className="flex flex-col items-start min-w-fit">
   <Link
     href="/"
-    className="bg-black text-[#F5E6CA] px-4 py-2 rounded-lg text-2xl font-bold whitespace-nowrap"
+    className="bg-black text-[#E8D6B5] px-3 py-2 rounded-lg text-lg font-bold"
   >
     Tech Hub
   </Link>
 
   <HeaderNavigation />
 </div>
-
       
 
-        <nav className="hidden lg:flex gap-6 font-medium text-gray-800">
+        <nav className="hidden lg:flex gap-4 font-medium text-gray-800">
 
   <Link
     href="/products"
