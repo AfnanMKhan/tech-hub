@@ -1,20 +1,23 @@
 import Link from "next/link";
 import SearchBar from "@/components/SearchBar";
-import NavButtons from "@/components/NavButtons";
 import HeaderNavigation from "@/components/HeaderNavigation";
 
 export default function Header() {
   return (
     <header className="bg-[#F5E6CA] border-b border-gray-300 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center gap-6">
-         <NavButtons />
+      
 
-        <Link
-          href="/"
-          className="bg-black text-[#F5E6CA] px-4 py-2 rounded-lg text-2xl font-bold whitespace-nowrap"
-        >
-          Tech Hub
-        </Link>
+        <div className="flex flex-col items-start">
+  <Link
+    href="/"
+    className="bg-black text-[#F5E6CA] px-4 py-2 rounded-lg text-2xl font-bold whitespace-nowrap"
+  >
+    Tech Hub
+  </Link>
+
+  <HeaderNavigation />
+</div>
 
       
 
