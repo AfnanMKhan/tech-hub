@@ -7,14 +7,14 @@ export default function HeaderNavigation() {
         onClick={() => history.back()}
         className="hover:opacity-70"
       >
-        ⏪⏩
+        ↩
       </button>
 
       <button
         onClick={() => history.forward()}
         className="hover:opacity-70"
       >
-        ⏩
+        ↪
       </button>
     </div>
   );
