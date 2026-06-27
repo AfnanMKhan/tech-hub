@@ -3,6 +3,939 @@ import { NextResponse } from "next/server";
 export async function GET() {
   return NextResponse.json([
     {
+  id: "xiaomi17t",
+  name: "Xiaomi 17T",
+  brand: "Xiaomi",
+  price: 59999,
+  rating: 4.8,
+
+  image: "/products/xiaomi17t/xiaomi17t.jpg",
+
+  images: [
+    "/products/xiaomi17t/2.jpg",
+    "/products/xiaomi17t/3.jpg",
+    "/products/xiaomi17t/4.jpg",
+  ],
+
+  category: "mobile",
+
+  battery: "6500mAh",
+  camera: "50MP + 50MP + 12MP",
+  display: "6.59 inch 1.5K AMOLED 120Hz",
+  processor: "MediaTek Dimensity 8500 Ultra",
+
+  highlights: [
+    "Leica Triple Camera System",
+    "50MP Leica Main Camera",
+    "50MP 5x Periscope Telephoto",
+    "6.59-inch 1.5K AMOLED Display",
+    "120Hz Refresh Rate",
+    "MediaTek Dimensity 8500 Ultra",
+    "6500mAh Silicon Carbon Battery",
+    "67W HyperCharge",
+    "IP68 Water Resistance",
+    "HyperOS 3 based on Android 16"
+  ],
+
+  specifications: {
+    General: {
+      Brand: "Xiaomi",
+      Model: "Xiaomi 17T",
+      LaunchYear: "2026",
+      OperatingSystem: "HyperOS 3",
+      AndroidVersion: "Android 16",
+      SIMType: "Dual SIM"
+    },
+
+    Display: {
+      Size: "6.59 inch",
+      Type: "AMOLED",
+      Resolution: "2756 x 1268",
+      RefreshRate: "120Hz",
+      Brightness: "3500 nits",
+      Protection: "Corning Gorilla Glass 7i",
+      HDR: "HDR10+ Dolby Vision"
+    },
+
+    Processor: {
+      Chipset: "MediaTek Dimensity 8500 Ultra",
+      Process: "4nm",
+      GPU: "Mali-G720 MC8",
+      AI: "NPU 880"
+    },
+
+    Memory: {
+      RAM: "12GB LPDDR5X",
+      Storage: "256GB"
+    },
+
+    Camera: {
+      RearCamera: "50MP Main + 50MP 5x Telephoto + 12MP Ultra Wide",
+      FrontCamera: "32MP",
+      VideoRecording: "4K 60fps",
+      Features: "Leica Optics, AI Zoom, HDR10+, Night Mode"
+    },
+
+    Battery: {
+      Capacity: "6500mAh",
+      Charging: "67W HyperCharge",
+      ReverseCharging: "22.5W",
+      Type: "Silicon Carbon"
+    },
+
+    Connectivity: {
+      Network: "5G",
+      WiFi: "Wi-Fi 6",
+      Bluetooth: "Bluetooth 6.0",
+      NFC: "Yes",
+      USB: "USB Type-C"
+    },
+
+    Design: {
+      Weight: "200g",
+      Thickness: "8.17mm",
+      WaterResistance: "IP68"
+    },
+
+    Security: {
+      FingerprintSensor: "In-display",
+      FaceUnlock: "Yes"
+    },
+
+    Sensors: {
+      Accelerometer: "Yes",
+      Gyroscope: "Yes",
+      AmbientLightSensor: "Yes",
+      Compass: "Yes",
+      IRBlaster: "Yes",
+      NFC: "Yes"
+    }
+  },
+
+  amazon: "https://www.amazon.in/XIAOMI-Flagship-Cameras-UltraPure-Segment/dp/B0GYY8ZNP3",
+  flipkart: "NOT AVAILABLE",
+  official: "https://www.mi.com/in/product/xiaomi-17t/"
+},
+{
+  id: "galaxys26ultra",
+  name: "Samsung Galaxy S26 Ultra",
+  brand: "Samsung",
+  price: 129999,
+  rating: 4.9,
+
+  image: "/products/galaxys26ultra/galaxys26ultra.jpg",
+
+  images: [
+    "/products/galaxys26ultra/2.jpg",
+    "/products/galaxys26ultra/3.jpg",
+    "/products/galaxys26ultra/4.jpg",
+  ],
+
+  category: "mobile",
+
+  battery: "5000mAh",
+  camera: "200MP Quad Camera",
+  display: "6.9 inch Dynamic AMOLED 2X",
+  processor: "Snapdragon 8 Elite Gen 5 for Galaxy",
+
+  highlights: [
+    "200MP Main Camera",
+    "50MP Ultra Wide Camera",
+    "50MP Periscope Telephoto",
+    "6.9-inch QHD+ AMOLED Display",
+    "120Hz Adaptive Refresh Rate",
+    "Galaxy AI Features",
+    "Privacy Display Technology",
+    "S Pen Support",
+    "60W Fast Charging",
+    "IP68 Water Resistance"
+  ],
+
+  specifications: {
+    General: {
+      Brand: "Samsung",
+      Model: "Galaxy S26 Ultra",
+      LaunchYear: "2026",
+      OperatingSystem: "Android 16",
+      UI: "One UI 8.5",
+      SIMType: "Dual SIM"
+    },
+
+    Display: {
+      Size: "6.9 inch",
+      Type: "Dynamic AMOLED 2X",
+      Resolution: "3120 x 1440",
+      RefreshRate: "1-120Hz Adaptive",
+      Brightness: "2600 nits",
+      Protection: "Corning Gorilla Glass Armor 2",
+      Features: "HDR10+, Vision Booster, Privacy Display"
+    },
+
+    Processor: {
+      Chipset: "Snapdragon 8 Elite Gen 5 for Galaxy",
+      Process: "3nm",
+      CPU: "Octa Core",
+      GPU: "Adreno 840",
+      AIEngine: "Galaxy AI"
+    },
+
+    Memory: {
+      RAM: "12GB",
+      Storage: "256GB",
+      Variants: "12GB+256GB, 12GB+512GB, 16GB+1TB"
+    },
+
+    Camera: {
+      RearCamera: "200MP Wide + 50MP Ultra Wide + 10MP Telephoto + 50MP Periscope",
+      FrontCamera: "12MP",
+      VideoRecording: "8K 30fps, 4K 120fps",
+      OpticalZoom: "3x + 5x",
+      Features: "Nightography, Galaxy AI Camera, HDR, OIS"
+    },
+
+    Battery: {
+      Capacity: "5000mAh",
+      Charging: "60W Fast Charging",
+      WirelessCharging: "25W Wireless",
+      ReverseCharging: "Yes"
+    },
+
+    Connectivity: {
+      Network: "5G",
+      WiFi: "Wi-Fi 7",
+      Bluetooth: "v6.0",
+      NFC: "Yes",
+      USB: "USB Type-C"
+    },
+
+    Design: {
+      Weight: "214g",
+      Build: "Glass Front & Back, Aluminum Frame",
+      WaterResistance: "IP68",
+      Dimensions: "163.6 x 78.1 x 7.9 mm"
+    },
+
+    Security: {
+      FingerprintSensor: "Ultrasonic In-Display",
+      FaceUnlock: "Yes"
+    },
+
+    Sensors: {
+      Accelerometer: "Yes",
+      Gyroscope: "Yes",
+      ProximitySensor: "Yes",
+      AmbientLightSensor: "Yes",
+      Compass: "Yes",
+      Barometer: "Yes"
+    }
+  },
+
+  amazon: "https://www.amazon.in/Samsung-Storage-Privacy-Creative-Snapdragon/dp/B0GL85WGTZ?th=1",
+  flipkart: "https://www.flipkart.com/samsung-galaxy-s26-ultra-5g-white-512-gb/p/itmf4799d3841c43",
+  official: "https://www.samsung.com/in/smartphones/galaxy-s26-ultra/"
+},
+{
+  id: "galaxys26",
+  name: "Samsung Galaxy S26",
+  brand: "Samsung",
+  price: 87999,
+  rating: 4.8,
+
+  image: "/products/galaxys26/galaxys26.jpg",
+
+  images: [
+    "/products/galaxys26/2.jpg",
+    "/products/galaxys26/3.jpg",
+    "/products/galaxys26/4.jpg",
+  ],
+
+  category: "mobile",
+
+  battery: "4300mAh",
+  camera: "50MP Triple Camera",
+  display: "6.3 inch Dynamic AMOLED 2X",
+  processor: "Snapdragon 8 Elite Gen 5 for Galaxy",
+
+  highlights: [
+    "6.3-inch Dynamic AMOLED 2X Display",
+    "120Hz Adaptive Refresh Rate",
+    "Snapdragon 8 Elite Gen 5 for Galaxy",
+    "50MP Main Camera",
+    "10MP 3x Telephoto Camera",
+    "12MP Ultra-Wide Camera",
+    "Galaxy AI Features",
+    "Wi-Fi 7 Support",
+    "IP68 Water Resistance",
+    "7 Years of Software Updates"
+  ],
+
+  specifications: {
+    General: {
+      Brand: "Samsung",
+      Model: "Galaxy S26",
+      LaunchYear: "2026",
+      OperatingSystem: "Android 16",
+      UI: "One UI 8.5",
+      SIMType: "Dual SIM (Nano-SIM + eSIM)"
+    },
+
+    Display: {
+      Size: "6.3 inch",
+      Type: "Dynamic AMOLED 2X",
+      Resolution: "2340 x 1080",
+      RefreshRate: "1-120Hz Adaptive",
+      Brightness: "3000 nits Peak",
+      Protection: "Corning Gorilla Glass Victus 2",
+      Features: "HDR10+, Always-On Display"
+    },
+
+    Processor: {
+      Chipset: "Snapdragon 8 Elite Gen 5 for Galaxy",
+      Process: "3nm",
+      CPU: "Octa Core",
+      GPU: "Adreno 840",
+      AIEngine: "Galaxy AI"
+    },
+
+    Memory: {
+      RAM: "12GB",
+      Storage: "256GB",
+      Variants: "12GB+256GB, 12GB+512GB"
+    },
+
+    Camera: {
+      RearCamera: "50MP Wide + 12MP Ultra Wide + 10MP Telephoto",
+      FrontCamera: "12MP",
+      VideoRecording: "8K 30fps, 4K 60fps",
+      OpticalZoom: "3x Optical Zoom",
+      Features: "Nightography, HDR, OIS, Galaxy AI Camera"
+    },
+
+    Battery: {
+      Capacity: "4300mAh",
+      Charging: "25W Fast Charging",
+      WirelessCharging: "Yes",
+      ReverseCharging: "Yes"
+    },
+
+    Connectivity: {
+      Network: "5G",
+      WiFi: "Wi-Fi 7",
+      Bluetooth: "v6.0",
+      NFC: "Yes",
+      USB: "USB Type-C"
+    },
+
+    Design: {
+      Weight: "167g",
+      Build: "Glass Front & Back, Armor Aluminum Frame",
+      WaterResistance: "IP68",
+      Dimensions: "149.6 x 71.7 x 7.2 mm"
+    },
+
+    Security: {
+      FingerprintSensor: "Ultrasonic In-Display",
+      FaceUnlock: "Yes"
+    },
+
+    Sensors: {
+      Accelerometer: "Yes",
+      Gyroscope: "Yes",
+      ProximitySensor: "Yes",
+      AmbientLightSensor: "Yes",
+      Compass: "Yes",
+      Barometer: "Yes"
+    }
+  },
+
+  amazon: "https://www.amazon.in/Samsung-Creative-ProVisual-Customized-Processor/dp/B0GL8BF2X2/ref=sr_1_1?adgrpid=58709836293&dib=eyJ2IjoiMSJ9.kD1Gxh83QLSNG_05bfQgjuOq6YPjwBvCm7OfBc7GHirOb1SgnCbShF8FqN5UY99iVif-DtQ6RG8R7t66q_RgqraXcgBnn9pewiSNrOOtFdIIq28uVcOLB02TWCIk0pShHncj-fVU5FRRWIkeDDigmk49mNVZcaEGjn-sC3jOlbu9JretbzJMOqdmfYpKhULsLrkBhU_F9VI_l8D_B59yJsKclnvUCwrI-Y4FunoCttw.4moaZ_AX1THuro9bQT_8DfGVokKS8UwZW6SrrcNTtLE&dib_tag=se&gad_source=1&hvadid=714819202763&hvdev=c&hvexpln=0&hvlocphy=1007788&hvnetw=g&hvocijid=13507048661066339713--&hvqmt=b&hvrand=13507048661066339713&hvtargid=kwd-2458904254539&hydadcr=25195_2856626&keywords=5g+samsung+galaxy+s26+price&mcid=c57aec11b1503f81bc9313e58438f1ad&qid=1782538193&sr=8-1",
+  flipkart: "https://www.flipkart.com/samsung-galaxy-s26-5g-white-256-gb/p/itm0ca5d0430e1c1?pid=MOBHKGAPH5JGKK3E&lid=LSTMOBHKGAPH5JGKK3EZ3VBBR&marketplace=FLIPKART&store=tyy%2F4io&srno=b_1_1&otracker=browse&fm=organic&iid=8389bc71-742d-4c24-a3ff-6cf8fa838e04.MOBHKGAPH5JGKK3E.SEARCH&ppt=None&ppn=None&ssid=hg181gmlqo0000001782538224497&ov_redirect=true",
+  official: "https://www.samsung.com/in/smartphones/galaxy-s26/"
+},
+{
+  id: "oppofindx9ultra",
+  name: "OPPO Find X9 Ultra",
+  brand: "OPPO",
+  price: 149999,
+  rating: 4.9,
+
+  image: "/products/oppofindx9ultra/oppofindx9ultra.jpg",
+
+  images: [
+    "/products/oppofindx9ultra/2.jpg",
+    "/products/oppofindx9ultra/3.jpg",
+    "/products/oppofindx9ultra/4.jpg",
+  ],
+
+  category: "mobile",
+
+  battery: "7050mAh",
+  camera: "200MP Penta Camera",
+  display: "6.82 inch QHD+ AMOLED 144Hz",
+  processor: "Snapdragon 8 Elite Gen 5",
+
+  highlights: [
+    "200MP Main Camera",
+    "200MP Periscope Telephoto Camera",
+    "50MP Ultra Telephoto Camera",
+    "50MP Ultra-Wide Camera",
+    "6.82-inch QHD+ AMOLED Display",
+    "144Hz Adaptive Refresh Rate",
+    "Snapdragon 8 Elite Gen 5",
+    "7050mAh Battery",
+    "100W SUPERVOOC Charging",
+    "50W AIRVOOC Wireless Charging",
+    "Hasselblad Camera System",
+    "IP68 Water Resistance"
+  ],
+
+  specifications: {
+    General: {
+      Brand: "OPPO",
+      Model: "Find X9 Ultra",
+      LaunchYear: "2026",
+      OperatingSystem: "Android 16",
+      UI: "ColorOS 16",
+      SIMType: "Dual SIM + eSIM"
+    },
+
+    Display: {
+      Size: "6.82 inch",
+      Type: "AMOLED",
+      Resolution: "3168 x 1440",
+      RefreshRate: "1-120Hz Adaptive, Up to 144Hz",
+      Brightness: "1800 nits HBM",
+      Protection: "Corning Gorilla Glass Victus 2",
+      ColorDepth: "10-bit"
+    },
+
+    Processor: {
+      Chipset: "Snapdragon 8 Elite Gen 5",
+      CPU: "Octa Core",
+      GPU: "Adreno 840",
+      Process: "3nm"
+    },
+
+    Memory: {
+      RAM: "12GB LPDDR5X",
+      Storage: "512GB UFS 4.1"
+    },
+
+    Camera: {
+      RearCamera: "200MP Main + 200MP Periscope + 50MP Ultra Telephoto + 50MP Ultra Wide + 3.2MP Monochrome",
+      FrontCamera: "50MP",
+      VideoRecording: "8K 30fps, 4K 120fps",
+      OpticalZoom: "Up to 10x Optical Zoom",
+      Features: "Hasselblad Camera System, OIS, Dolby Vision, Night Mode"
+    },
+
+    Battery: {
+      Capacity: "7050mAh",
+      Charging: "100W SUPERVOOC",
+      WirelessCharging: "50W AIRVOOC",
+      ReverseCharging: "Yes"
+    },
+
+    Connectivity: {
+      Network: "5G",
+      WiFi: "Wi-Fi 7",
+      Bluetooth: "Bluetooth 6.0",
+      NFC: "Yes",
+      USB: "USB Type-C 3.2"
+    },
+
+    Design: {
+      Weight: "235g",
+      Thickness: "8.7mm",
+      Build: "Glass and Metal",
+      WaterResistance: "IP68"
+    },
+
+    Security: {
+      FingerprintSensor: "Ultrasonic In-Display",
+      FaceUnlock: "Yes"
+    },
+
+    Sensors: {
+      Accelerometer: "Yes",
+      Gyroscope: "Yes",
+      AmbientLightSensor: "Yes",
+      ProximitySensor: "Yes",
+      Compass: "Yes",
+      HallSensor: "Yes",
+      InfraredBlaster: "Yes",
+      LaserFocusSensor: "Yes"
+    }
+  },
+
+  amazon: "https://www.amazon.in/Find-X9-Hasselblad-Snapdragon-Additional/dp/B0GZ7Q6K2D?th=1",
+  flipkart: "https://www.flipkart.com/oppo-find-x9-ultra-tundra-umber-512-gb/p/itma944cf479f633",
+  official: "https://www.oppo.com/in/smartphones/series-find-x/find-x9-ultra/"
+},
+{
+  id: "iqoo15",
+  name: "iQOO 15",
+  brand: "iQOO",
+  price: 72999,
+  rating: 4.8,
+
+  image: "/products/iqoo15/iqoo15.jpg",
+
+  images: [
+    "/products/iqoo15/2.jpg",
+    "/products/iqoo15/3.jpg",
+    "/products/iqoo15/4.jpg",
+  ],
+
+  category: "mobile",
+
+  battery: "7000mAh",
+  camera: "50MP Triple Camera",
+  display: "6.85 inch 2K AMOLED 144Hz",
+  processor: "Snapdragon 8 Elite Gen 5",
+
+  highlights: [
+    "Snapdragon 8 Elite Gen 5",
+    "Supercomputing Chip Q3",
+    "6.85-inch Samsung 2K M14 OLED",
+    "144Hz Refresh Rate",
+    "7000mAh Silicon Anode Battery",
+    "100W Fast Charging",
+    "50MP Sony Periscope Camera",
+    "IP68 + IP69 Rating",
+    "Ultrasonic Fingerprint Scanner",
+    "Wi-Fi 7 Support"
+  ],
+
+  specifications: {
+    General: {
+      Brand: "iQOO",
+      Model: "iQOO 15",
+      LaunchYear: "2025",
+      OperatingSystem: "Android 16",
+      UI: "OriginOS 6",
+      SIMType: "Dual SIM"
+    },
+
+    Display: {
+      Size: "6.85 inch",
+      Type: "Samsung 2K M14 AMOLED",
+      Resolution: "3168 x 1440",
+      RefreshRate: "144Hz",
+      Brightness: "6000 nits Peak",
+      PixelDensity: "508 PPI",
+      HDR: "HDR10+"
+    },
+
+    Processor: {
+      Chipset: "Snapdragon 8 Elite Gen 5",
+      Process: "3nm",
+      GPU: "Adreno",
+      GamingChip: "Supercomputing Chip Q3"
+    },
+
+    Memory: {
+      RAM: "12GB LPDDR5X",
+      Storage: "256GB UFS 4.1",
+      Variants: "12GB+256GB, 16GB+512GB"
+    },
+
+    Camera: {
+      RearCamera: "50MP Main + 50MP Ultra Wide + 50MP 3x Periscope",
+      FrontCamera: "32MP",
+      VideoRecording: "8K 30fps, 4K 60fps",
+      OpticalZoom: "3x Optical Zoom",
+      Features: "OIS, Night Mode, AI Photography"
+    },
+
+    Battery: {
+      Capacity: "7000mAh",
+      Charging: "100W Fast Charging",
+      WirelessCharging: "Supported",
+      Type: "Silicon Anode Battery"
+    },
+
+    Connectivity: {
+      Network: "5G",
+      WiFi: "Wi-Fi 7",
+      Bluetooth: "v5.4",
+      NFC: "Yes",
+      USB: "USB Type-C 3.2"
+    },
+
+    Design: {
+      Weight: "213g",
+      Build: "Glass Back, Metal Frame",
+      WaterResistance: "IP68 + IP69",
+      Fingerprint: "3D Ultrasonic In-Display"
+    },
+
+    Security: {
+      FingerprintSensor: "Ultrasonic In-Display",
+      FaceUnlock: "Yes"
+    },
+
+    Sensors: {
+      Accelerometer: "Yes",
+      Gyroscope: "Yes",
+      ProximitySensor: "Yes",
+      AmbientLightSensor: "Yes",
+      Compass: "Yes",
+      IRBlaster: "Yes"
+    }
+  },
+
+  amazon: "https://www.amazon.in/iQOO-Storage-Fastest-Snapdragon-Processor/dp/B0FYGBSKFB?th=1",
+  flipkart: "https://www.flipkart.com/iqoo-15-5g-alpha-256-gb/p/itm3187e36213a01",
+  official: "https://www.iqoo.com/in/products/iqoo15"
+},
+{
+  id: "oneplus15r",
+  name: "OnePlus 15R",
+  brand: "OnePlus",
+  price: 59999,
+  rating: 4.8,
+
+  image: "/products/oneplus15r/oneplus15r.jpg",
+
+  images: [
+    "/products/oneplus15r/2.jpg",
+    "/products/oneplus15r/3.jpg",
+    "/products/oneplus15r/4.jpg",
+  ],
+
+  category: "mobile",
+
+  battery: "7400mAh",
+  camera: "50MP Dual Camera",
+  display: "6.83 inch AMOLED 165Hz",
+  processor: "Snapdragon 8 Gen 5",
+
+  highlights: [
+    "Snapdragon 8 Gen 5 Processor",
+    "6.83-inch 1.5K AMOLED Display",
+    "165Hz Adaptive Refresh Rate",
+    "7400mAh Silicon Carbon Battery",
+    "80W SUPERVOOC Charging",
+    "50MP Sony IMX906 Camera",
+    "32MP Selfie Camera",
+    "OxygenOS 16",
+    "Ultrasonic Fingerprint Scanner",
+    "IP68/IP69 Water Resistance"
+  ],
+
+  specifications: {
+    General: {
+      Brand: "OnePlus",
+      Model: "OnePlus 15R",
+      LaunchYear: "2025",
+      OperatingSystem: "Android 16",
+      UI: "OxygenOS 16",
+      SIMType: "Dual Nano SIM"
+    },
+
+    Display: {
+      Size: "6.83 inch",
+      Type: "AMOLED",
+      Resolution: "2800 x 1272",
+      RefreshRate: "60-165Hz Adaptive",
+      Brightness: "1800 nits HBM",
+      Protection: "Corning Gorilla Glass 7i",
+      ColorDepth: "10-bit"
+    },
+
+    Processor: {
+      Chipset: "Snapdragon 8 Gen 5",
+      CPU: "Qualcomm Oryon Octa Core",
+      GPU: "Adreno 840",
+      Process: "3nm"
+    },
+
+    Memory: {
+      RAM: "12GB LPDDR5X Ultra",
+      Storage: "256GB",
+      Variants: "12GB+256GB, 12GB+512GB"
+    },
+
+    Camera: {
+      RearCamera: "50MP Sony IMX906 + 8MP Ultra Wide",
+      FrontCamera: "32MP",
+      VideoRecording: "4K 120fps",
+      OIS: "Yes",
+      Features: "Night Mode, Portrait, Pro Mode, HDR"
+    },
+
+    Battery: {
+      Capacity: "7400mAh",
+      Charging: "80W SUPERVOOC",
+      Type: "Silicon Carbon Battery",
+      ReverseCharging: "Yes"
+    },
+
+    Connectivity: {
+      Network: "5G",
+      WiFi: "Wi-Fi 7",
+      Bluetooth: "v6.0",
+      NFC: "Yes",
+      USB: "USB Type-C 2.0"
+    },
+
+    Design: {
+      Weight: "214g",
+      Thickness: "8.3mm",
+      Build: "Glass Front & Back",
+      WaterResistance: "IP68/IP69"
+    },
+
+    Security: {
+      FingerprintSensor: "Ultrasonic In-Display",
+      FaceUnlock: "Yes"
+    },
+
+    Sensors: {
+      Accelerometer: "Yes",
+      Gyroscope: "Yes",
+      ProximitySensor: "Yes",
+      AmbientLightSensor: "Yes",
+      Compass: "Yes",
+      IRBlaster: "Yes"
+    }
+  },
+
+  amazon: "https://www.amazon.in/OnePlus-Charcoal-Snapdragon%C2%AE-Personalised-Game-Changing/dp/B0FZSWZZW2/ref=asc_df_B0FZSWZZW2?mcid=a40a36c3d65e3f3c99baa85677cc61ee&tag=googleshopdes-21&linkCode=df0&hvadid=709962856229&hvpos=&hvnetw=g&hvrand=12583279919281824738&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1007788&hvtargid=pla-2458473113716&hvocijid=12583279919281824738-B0FZSWZZW2-&hvexpln=0&gad_source=1&th=1",
+  flipkart: "https://www.flipkart.com/oneplus-15r-5g-mint-breeze-256-gb/p/itmc1c624041ba6c",
+  official: "https://www.oneplus.com/15r"
+},
+{
+  id: "galaxya37",
+  name: "Samsung Galaxy A37",
+  brand: "Samsung",
+  price: 41999,
+  rating: 4.6,
+
+  image: "/products/galaxya37/galaxya37.jpg",
+
+  images: [
+    "/products/galaxya37/2.jpg",
+    "/products/galaxya37/3.jpg",
+    "/products/galaxya37/4.jpg",
+  ],
+
+  category: "mobile",
+
+  battery: "5000mAh",
+  camera: "50MP Triple Camera",
+  display: "6.7 inch Super AMOLED 120Hz",
+  processor: "Exynos 1480",
+
+  highlights: [
+    "6.7-inch Super AMOLED Display",
+    "120Hz Refresh Rate",
+    "50MP OIS Main Camera",
+    "12MP Selfie Camera",
+    "5000mAh Battery",
+    "45W Fast Charging",
+    "Exynos 1480 Processor",
+    "IP68 Water Resistance",
+    "Corning Gorilla Glass Victus+",
+    "6 Years OS Updates"
+  ],
+
+  specifications: {
+    General: {
+      Brand: "Samsung",
+      Model: "Galaxy A37",
+      LaunchYear: "2026",
+      OperatingSystem: "Android 16",
+      UI: "One UI 8.5",
+      SIMType: "Dual Nano SIM"
+    },
+
+    Display: {
+      Size: "6.7 inch",
+      Type: "Super AMOLED",
+      Resolution: "2340 x 1080",
+      RefreshRate: "120Hz",
+      Protection: "Corning Gorilla Glass Victus+",
+      ColorDepth: "16M Colors"
+    },
+
+    Processor: {
+      Chipset: "Exynos 1480",
+      CPU: "Octa Core",
+      CPUSpeed: "2.75GHz",
+      GPU: "Xclipse GPU"
+    },
+
+    Memory: {
+      RAM: "8GB",
+      Storage: "128GB",
+      Variants: "8GB+128GB, 8GB+256GB, 12GB+256GB"
+    },
+
+    Camera: {
+      RearCamera: "50MP Main + 8MP Ultra Wide + 5MP Macro",
+      FrontCamera: "12MP",
+      VideoRecording: "4K UHD 30fps",
+      OIS: "Yes",
+      Features: "Night Mode, Portrait Mode, HDR"
+    },
+
+    Battery: {
+      Capacity: "5000mAh",
+      Charging: "45W Fast Charging",
+      VideoPlayback: "Up to 29 Hours"
+    },
+
+    Connectivity: {
+      Network: "5G",
+      WiFi: "Wi-Fi 6",
+      Bluetooth: "v5.3",
+      NFC: "Yes",
+      USB: "USB Type-C"
+    },
+
+    Design: {
+      Weight: "196g",
+      Dimensions: "162.9 x 78.2 x 7.4 mm",
+      Build: "Glass Front & Back",
+      WaterResistance: "IP68"
+    },
+
+    Security: {
+      FingerprintSensor: "In-Display",
+      FaceUnlock: "Yes"
+    },
+
+    Sensors: {
+      Accelerometer: "Yes",
+      Gyroscope: "Yes",
+      ProximitySensor: "Yes",
+      AmbientLightSensor: "Yes",
+      Compass: "Yes"
+    }
+  },
+
+  amazon: "https://www.amazon.in/Samsung-Awesome-Charcoal-Nightography-Upgrades/dp/B0GS1FKBS9",
+  flipkart: "https://www.flipkart.com/samsung-galaxy-a37-5g-awesome-charcoal-256-gb/p/itm793d1b5fe9bc5",
+  official: "https://www.samsung.com/in/smartphones/galaxy-a/galaxy-a37-5g-awesome-charcoal-128gb-sm-a376ezadins/"
+},
+{
+  id: "realme16t",
+  name: "Realme 16T",
+  brand: "Realme",
+  price: 29999,
+  rating: 4.5,
+
+  image: "/products/realme16t/realme16t.jpg",
+
+  images: [
+    "/products/realme16t/2.jpg",
+    "/products/realme16t/3.jpg",
+    "/products/realme16t/4.jpg",
+  ],
+
+  category: "mobile",
+
+  battery: "8000mAh",
+  camera: "50MP Dual Camera",
+  display: "6.8 inch LCD 144Hz",
+  processor: "MediaTek Dimensity 6300",
+
+  highlights: [
+    "8000mAh Titan Battery",
+    "45W SUPERVOOC Fast Charging",
+    "50MP Sony IMX852 Camera",
+    "6.8-inch 144Hz Display",
+    "MediaTek Dimensity 6300",
+    "IP69 Pro Water Resistance",
+    "Military Grade Durability",
+    "AI Instant Clip",
+    "AI Popout Collage",
+    "6 Years Smooth Performance"
+  ],
+
+  specifications: {
+    General: {
+      Brand: "Realme",
+      Model: "Realme 16T",
+      LaunchYear: "2026",
+      OperatingSystem: "Android 16",
+      UI: "realme UI 7.0",
+      SIMType: "Dual Nano SIM"
+    },
+
+    Display: {
+      Size: "6.8 inch",
+      Type: "LCD",
+      Resolution: "1570 x 720",
+      RefreshRate: "144Hz",
+      Brightness: "1200 nits HBM",
+      PixelDensity: "254 PPI",
+      Protection: "Panda Glass"
+    },
+
+    Processor: {
+      Chipset: "MediaTek Dimensity 6300",
+      CPU: "Octa Core",
+      GPU: "Mali-G57 MC2",
+      Process: "6nm"
+    },
+
+    Memory: {
+      RAM: "8GB LPDDR4X",
+      Storage: "256GB UFS 2.2",
+      Variants: "6GB+128GB, 8GB+128GB, 8GB+256GB"
+    },
+
+    Camera: {
+      RearCamera: "50MP Sony IMX852 + 2MP Monochrome",
+      FrontCamera: "16MP",
+      VideoRecording: "1080p 60fps",
+      Features: "Night Mode, AI Camera, Portrait Mode, AI Instant Clip"
+    },
+
+    Battery: {
+      Capacity: "8000mAh",
+      Charging: "45W SUPERVOOC",
+      ReverseCharging: "Yes",
+      BatteryHealth: "7 Years Battery Health"
+    },
+
+    Connectivity: {
+      Network: "5G",
+      WiFi: "Wi-Fi 5",
+      Bluetooth: "v5.3",
+      NFC: "No",
+      USB: "USB Type-C"
+    },
+
+    Design: {
+      Weight: "224g",
+      Thickness: "8.88mm",
+      Build: "Plastic Frame",
+      WaterResistance: "IP66/IP68/IP69"
+    },
+
+    Security: {
+      FingerprintSensor: "Side Mounted",
+      FaceUnlock: "Yes"
+    },
+
+    Sensors: {
+      Accelerometer: "Yes",
+      ProximitySensor: "Yes",
+      AmbientLightSensor: "Yes",
+      Compass: "Yes",
+      Gyroscope: "Virtual"
+    }
+  },
+
+  amazon: "https://www.amazon.in/realme-Smartphone-Batterya-Dimensity-Starlight/dp/B0H258FB8P?th=1",
+  flipkart: "https://www.flipkart.com/realme-16t-5g-aurora-green-256-gb/p/itm604f2af610fd0",
+  official: "https://www.realme.com/in/realme-16t-5g"
+},
+    {
       id: "iphone15",
       name: "iPhone 15",
       brand: "Apple",

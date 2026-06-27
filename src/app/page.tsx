@@ -146,6 +146,88 @@ export default function Home() {
     </Link>
   </div>
 </section>
+<section className="max-w-6xl mx-auto px-6 py-14">
+  <h2 className="text-3xl font-bold mb-8">
+    Upcoming Launches
+  </h2>
+
+  {/* Mobiles */}
+  <h3 className="text-2xl font-semibold mb-4">
+    📱 Mobile Phones
+  </h3>
+
+  <div className="grid md:grid-cols-4 gap-4 mb-10">
+    <div className="bg-[#F5E6CA] p-5 rounded-xl shadow">
+      Xiaomi 17T
+    </div>
+
+    <div className="bg-[#F5E6CA] p-5 rounded-xl shadow">
+      OnePlus 15R
+    </div>
+
+    <div className="bg-[#F5E6CA] p-5 rounded-xl shadow">
+      Realme 16T
+    </div>
+
+    <div className="bg-[#F5E6CA] p-5 rounded-xl shadow">
+      Samsung Galaxy A37
+    </div>
+
+    <div className="bg-[#F5E6CA] p-5 rounded-xl shadow">
+      Samsung Galaxy S26
+    </div>
+
+    <div className="bg-[#F5E6CA] p-5 rounded-xl shadow">
+      Samsung Galaxy S26 Ultra
+    </div>
+
+    <div className="bg-[#F5E6CA] p-5 rounded-xl shadow">
+      iQOO 15
+    </div>
+
+    <div className="bg-[#F5E6CA] p-5 rounded-xl shadow">
+      OPPO Find X9 Ultra
+    </div>
+  </div>
+
+  {/* Laptops */}
+  <h3 className="text-2xl font-semibold mb-4">
+    💻 Laptops
+  </h3>
+
+  <div className="grid md:grid-cols-3 gap-4 mb-10">
+    <div className="bg-[#F5E6CA] p-5 rounded-xl shadow">
+      ASUS ROG Zephyrus G17 (Expected)
+    </div>
+
+    <div className="bg-[#F5E6CA] p-5 rounded-xl shadow">
+      Lenovo Legion 8i (Expected)
+    </div>
+
+    <div className="bg-[#F5E6CA] p-5 rounded-xl shadow">
+      HP Omen 17 (Expected)
+    </div>
+  </div>
+
+  {/* Games */}
+  <h3 className="text-2xl font-semibold mb-4">
+    🎮 Games
+  </h3>
+
+  <div className="grid md:grid-cols-3 gap-4">
+    <div className="bg-[#F5E6CA] p-5 rounded-xl shadow">
+      GTA VI
+    </div>
+
+    <div className="bg-[#F5E6CA] p-5 rounded-xl shadow">
+      Witcher 4
+    </div>
+
+    <div className="bg-[#F5E6CA] p-5 rounded-xl shadow">
+      Resident Evil 9
+    </div>
+  </div>
+</section>
 
       <section className="max-w-6xl mx-auto px-6 py-14">
         <h2 className="text-3xl font-bold mb-8">
@@ -170,6 +252,7 @@ export default function Home() {
           ))}
         </div>
       </section>
+
 
       <section className="max-w-6xl mx-auto px-6 py-14">
   <h2 className="text-3xl font-bold mb-8">
