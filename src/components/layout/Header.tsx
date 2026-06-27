@@ -27,6 +27,13 @@ export default function Header() {
   </Link>
 
   <Link
+  href="/new-launches"
+  className="hover:text-black hover:underline"
+>
+  New Launches
+</Link>
+
+  <Link
     href="/category/mobile"
     className="hover:text-black hover:underline"
   >
@@ -52,13 +59,6 @@ export default function Header() {
     className="hover:text-black hover:underline"
   >
     Compare
-  </Link>
-
-  <Link
-    href="/blog"
-    className="hover:text-black hover:underline"
-  >
-    Reviews
   </Link>
 
   <Link

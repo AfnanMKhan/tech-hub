@@ -156,77 +156,88 @@ export default function Home() {
     📱 Mobile Phones
   </h3>
 
-  <div className="grid md:grid-cols-4 gap-4 mb-10">
-    <div className="bg-[#F5E6CA] p-5 rounded-xl shadow">
-      Xiaomi 17T
-    </div>
+  <Link href="/product/xiaomi17t" className="bg-[#F5E6CA] p-5 rounded-xl shadow block">
+  Xiaomi 17T
+</Link>
 
-    <div className="bg-[#F5E6CA] p-5 rounded-xl shadow">
-      OnePlus 15R
-    </div>
+<Link href="/product/oneplus15r" className="bg-[#F5E6CA] p-5 rounded-xl shadow block">
+  OnePlus 15R
+</Link>
 
-    <div className="bg-[#F5E6CA] p-5 rounded-xl shadow">
-      Realme 16T
-    </div>
+<Link href="/product/realme16t" className="bg-[#F5E6CA] p-5 rounded-xl shadow block">
+  Realme 16T
+</Link>
 
-    <div className="bg-[#F5E6CA] p-5 rounded-xl shadow">
-      Samsung Galaxy A37
-    </div>
+<Link href="/product/galaxya37" className="bg-[#F5E6CA] p-5 rounded-xl shadow block">
+  Samsung Galaxy A37
+</Link>
 
-    <div className="bg-[#F5E6CA] p-5 rounded-xl shadow">
-      Samsung Galaxy S26
-    </div>
+<Link href="/product/galaxys26" className="bg-[#F5E6CA] p-5 rounded-xl shadow block">
+  Samsung Galaxy S26
+</Link>
 
-    <div className="bg-[#F5E6CA] p-5 rounded-xl shadow">
-      Samsung Galaxy S26 Ultra
-    </div>
+<Link href="/product/galaxys26ultra" className="bg-[#F5E6CA] p-5 rounded-xl shadow block">
+  Samsung Galaxy S26 Ultra
+</Link>
 
-    <div className="bg-[#F5E6CA] p-5 rounded-xl shadow">
-      iQOO 15
-    </div>
+<Link href="/product/iqoo15" className="bg-[#F5E6CA] p-5 rounded-xl shadow block">
+  iQOO 15
+</Link>
 
-    <div className="bg-[#F5E6CA] p-5 rounded-xl shadow">
-      OPPO Find X9 Ultra
-    </div>
-  </div>
+<Link href="/product/oppofindx9ultra" className="bg-[#F5E6CA] p-5 rounded-xl shadow block">
+  OPPO Find X9 Ultra
+</Link>
+
 
   {/* Laptops */}
   <h3 className="text-2xl font-semibold mb-4">
     💻 Laptops
   </h3>
 
-  <div className="grid md:grid-cols-3 gap-4 mb-10">
-    <div className="bg-[#F5E6CA] p-5 rounded-xl shadow">
-      ASUS ROG Zephyrus G17 (Expected)
-    </div>
+<Link href="/product/hp-omen-max-16" className="bg-[#F5E6CA] p-5 rounded-xl shadow block">
+  HP Omen Max 16
+</Link>
 
-    <div className="bg-[#F5E6CA] p-5 rounded-xl shadow">
-      Lenovo Legion 8i (Expected)
-    </div>
+<Link href="/product/lenovo-legion-9i" className="bg-[#F5E6CA] p-5 rounded-xl shadow block">
+  Lenovo Legion 9i
+</Link>
 
-    <div className="bg-[#F5E6CA] p-5 rounded-xl shadow">
-      HP Omen 17 (Expected)
-    </div>
-  </div>
+<Link href="/product/acer-predator-helios-18" className="bg-[#F5E6CA] p-5 rounded-xl shadow block">
+  Acer Predator Helios 18
+</Link>
 
   {/* Games */}
-  <h3 className="text-2xl font-semibold mb-4">
-    🎮 Games
-  </h3>
+  <h2 className="text-2xl font-bold mb-4">
+  🎮 Upcoming Games
+</h2>
 
-  <div className="grid md:grid-cols-3 gap-4">
-    <div className="bg-[#F5E6CA] p-5 rounded-xl shadow">
-      GTA VI
-    </div>
+<div className="grid md:grid-cols-3 gap-6">
 
-    <div className="bg-[#F5E6CA] p-5 rounded-xl shadow">
-      Witcher 4
-    </div>
+  <Link href="/game/gta6" className="bg-[#F5E6CA] p-5 rounded-xl shadow block">
+    GTA VI
+  </Link>
 
-    <div className="bg-[#F5E6CA] p-5 rounded-xl shadow">
-      Resident Evil 9
-    </div>
-  </div>
+  <Link href="/game/witcher4" className="bg-[#F5E6CA] p-5 rounded-xl shadow block">
+    The Witcher 4
+  </Link>
+
+  <Link href="/game/ea-fc-27" className="bg-[#F5E6CA] p-5 rounded-xl shadow block">
+    EA FC 27
+  </Link>
+
+  <Link href="/game/call-of-duty-black-ops-8" className="bg-[#F5E6CA] p-5 rounded-xl shadow block">
+    Call of Duty: Black Ops 8
+  </Link>
+
+  <Link href="/game/forza-horizon-6" className="bg-[#F5E6CA] p-5 rounded-xl shadow block">
+    Forza Horizon 6 (Launched)
+  </Link>
+
+  <Link href="/game/resident-evil-9" className="bg-[#F5E6CA] p-5 rounded-xl shadow block">
+    Resident Evil 9 (Launched)
+  </Link>
+
+</div>
 </section>
 
       <section className="max-w-6xl mx-auto px-6 py-14">

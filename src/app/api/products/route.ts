@@ -2917,6 +2917,319 @@ specifications: {
    },
 
    {
+  id: "hpomenmax16",
+  name: "HP Omen Max 16",
+  brand: "HP",
+  price: 299999,
+  rating: 4.8,
+
+  image: "/products/hpomenmax16/hpomenmax16.jpg",
+
+  images: [
+    "/products/hpomenmax16/2.jpg",
+    "/products/hpomenmax16/3.jpg",
+    "/products/hpomenmax16/4.jpg",
+  ],
+
+  category: "laptop",
+
+  battery: "83Wh",
+  camera: "1080p IR Camera",
+  display: "16 inch OLED 240Hz",
+  processor: "Intel Core Ultra 9 275HX",
+
+  highlights: [
+    "Intel Core Ultra 9 275HX",
+    "NVIDIA RTX 5090 Laptop GPU",
+    "16-inch OLED Display",
+    "240Hz Refresh Rate",
+    "64GB DDR5 RAM",
+    "2TB PCIe Gen4 SSD",
+    "Wi-Fi 7",
+    "Thunderbolt 4 Support",
+    "Per-Key RGB Keyboard",
+    "Advanced OMEN Cooling"
+  ],
+
+  specifications: {
+    General: {
+      Brand: "HP",
+      Model: "Omen Max 16",
+      LaunchYear: "2025",
+      OperatingSystem: "Windows 11 Home",
+      Type: "Gaming Laptop"
+    },
+
+    Display: {
+      Size: "16 inch",
+      Type: "OLED",
+      Resolution: "2560 x 1600",
+      RefreshRate: "240Hz",
+      Brightness: "500 nits HDR",
+      ColorGamut: "100% DCI-P3"
+    },
+
+    Processor: {
+      Chipset: "Intel Core Ultra 9 275HX",
+      Cores: "24",
+      Threads: "24",
+      AIEngine: "Intel AI Boost"
+    },
+
+    Memory: {
+      RAM: "64GB DDR5",
+      Storage: "2TB PCIe Gen4 SSD",
+      Expandable: "Yes"
+    },
+
+    Graphics: {
+      GPU: "NVIDIA GeForce RTX 5090 Laptop",
+      VRAM: "24GB GDDR7"
+    },
+
+    Battery: {
+      Capacity: "83Wh",
+      Charging: "330W Fast Charging"
+    },
+
+    Connectivity: {
+      WiFi: "Wi-Fi 7",
+      Bluetooth: "v5.4",
+      Thunderbolt: "2 x Thunderbolt 4",
+      HDMI: "HDMI 2.1",
+      Ethernet: "RJ45"
+    },
+
+    Design: {
+      Weight: "2.68kg",
+      Color: "Shadow Black"
+    },
+
+    Security: {
+      IRCamera: "Yes",
+      WindowsHello: "Yes"
+    }
+  },
+
+  amazon: "https://www.amazon.in/HP-processor-Office24-Backlit-Ah0076Tx/dp/B0DVLQCXLW",
+  flipkart: "https://www.flipkart.com/hp-omen-max-intel-core-ultra-9-275hx-32-gb-1-tb-ssd-windows-11-home-16-gb-graphics-nvidia-geforce-rtx-5080-16-ah0076tx-gaming-laptop/p/itm1a380a7b79f8e",
+  official: "https://www.hp.com/in-en/gaming-pc/laptops/2025-omen-max16-intel.html"
+},
+
+{
+  id: "lenovolegion9i",
+  name: "Lenovo Legion 9i",
+  brand: "Lenovo",
+  price: 449999,
+  rating: 4.9,
+
+  image: "/products/lenovolegion9i/lenovolegion9i.jpg",
+
+  images: [
+    "/products/lenovolegion9i/2.jpg",
+    "/products/lenovolegion9i/3.jpg",
+    "/products/lenovolegion9i/4.jpg",
+  ],
+
+  category: "laptop",
+
+  battery: "99.99Wh",
+  camera: "5MP Webcam",
+  display: "18 inch Mini LED 165Hz",
+  processor: "Intel Core Ultra 9 275HX",
+
+  highlights: [
+    "Intel Core Ultra 9 275HX",
+    "NVIDIA RTX 5090 Laptop GPU",
+    "18-inch Mini LED Display",
+    "165Hz Refresh Rate",
+    "64GB DDR5 RAM",
+    "4TB PCIe Gen4 SSD",
+    "Wi-Fi 7",
+    "5MP Webcam",
+    "Legion Coldfront Cooling",
+    "Per-Key RGB Keyboard"
+  ],
+
+  specifications: {
+    General: {
+      Brand: "Lenovo",
+      Model: "Legion 9i",
+      LaunchYear: "2025",
+      OperatingSystem: "Windows 11 Pro",
+      Type: "Gaming Laptop"
+    },
+
+    Display: {
+      Size: "18 inch",
+      Type: "Mini LED",
+      Resolution: "3840 x 2400",
+      RefreshRate: "165Hz",
+      Brightness: "1200 nits Peak",
+      ColorGamut: "100% DCI-P3"
+    },
+
+    Processor: {
+      Chipset: "Intel Core Ultra 9 275HX",
+      Cores: "24",
+      Threads: "24",
+      AIEngine: "Intel AI Boost"
+    },
+
+    Memory: {
+      RAM: "64GB DDR5",
+      Storage: "4TB PCIe Gen4 SSD",
+      Expandable: "Yes"
+    },
+
+    Graphics: {
+      GPU: "NVIDIA GeForce RTX 5090 Laptop",
+      VRAM: "24GB GDDR7"
+    },
+
+    Battery: {
+      Capacity: "99.99Wh",
+      Charging: "400W Fast Charging"
+    },
+
+    Connectivity: {
+      WiFi: "Wi-Fi 7",
+      Bluetooth: "v5.4",
+      Thunderbolt: "2 x Thunderbolt 4",
+      HDMI: "HDMI 2.1",
+      Ethernet: "RJ45 2.5G"
+    },
+
+    Design: {
+      Weight: "3.6kg",
+      Build: "Forged Carbon Lid",
+      Keyboard: "Per-Key RGB"
+    },
+
+    Security: {
+      Webcam: "5MP",
+      PrivacyShutter: "Yes",
+      WindowsHello: "Yes"
+    }
+  },
+
+  amazon: "https://www.amazon.in/Lenovo-Ultra-275HX-GeForce-Naked-Eye/dp/B0F9Y7PHGP",
+  flipkart: "https://www.flipkart.com/lenovo-legion-9-intel-core-i9-14th-gen-14900hx-64-gb-2-tb-ssd-windows-11-home-16-gb-graphics-nvidia-geforce-rtx-4090-16irx9-gaming-laptop/p/itm83a82923ad378",
+  official: "https://www.lenovo.com/in/en/p/laptops/legion-laptops/legion-9-series/legion-9i-gen-10-18-inch-intel/len101g0043?srsltid=AfmBOopHPupwRAHp9FD0g5mp0mLiSzBujCG2rP8OW-v4zBlipw0Ir8lh"
+},
+
+{
+  id: "acerpredatorhelios18",
+  name: "Acer Predator Helios 18",
+  brand: "Acer",
+  price: 379999,
+  rating: 4.8,
+
+  image: "/products/acerpredatorhelios18/acerpredatorhelios18.jpg",
+
+  images: [
+    "/products/acerpredatorhelios18/2.jpg",
+    "/products/acerpredatorhelios18/3.jpg",
+    "/products/acerpredatorhelios18/4.jpg",
+  ],
+
+  category: "laptop",
+
+  battery: "90Wh",
+  camera: "1080p Webcam",
+  display: "18 inch Mini LED 250Hz",
+  processor: "Intel Core Ultra 9 275HX",
+
+  highlights: [
+    "Intel Core Ultra 9 275HX",
+    "NVIDIA GeForce RTX 5090 Laptop GPU",
+    "18-inch Mini LED Display",
+    "250Hz Refresh Rate",
+    "64GB DDR5 RAM",
+    "2TB PCIe Gen4 SSD",
+    "Wi-Fi 7 Connectivity",
+    "RGB Per-Key Keyboard",
+    "PredatorSense Control Center",
+    "Advanced AeroBlade Cooling"
+  ],
+
+  specifications: {
+    General: {
+      Brand: "Acer",
+      Model: "Predator Helios 18",
+      LaunchYear: "2025",
+      OperatingSystem: "Windows 11 Home",
+      Type: "Gaming Laptop"
+    },
+
+    Display: {
+      Size: "18 inch",
+      Type: "Mini LED",
+      Resolution: "2560 x 1600",
+      RefreshRate: "250Hz",
+      Brightness: "1000 nits Peak",
+      ColorGamut: "100% DCI-P3"
+    },
+
+    Processor: {
+      Chipset: "Intel Core Ultra 9 275HX",
+      Cores: "24",
+      Threads: "24",
+      AIEngine: "Intel AI Boost"
+    },
+
+    Memory: {
+      RAM: "64GB DDR5",
+      Storage: "2TB PCIe Gen4 SSD",
+      Expandable: "Yes"
+    },
+
+    Graphics: {
+      GPU: "NVIDIA GeForce RTX 5090 Laptop",
+      VRAM: "24GB GDDR7"
+    },
+
+    Camera: {
+      Webcam: "1080p Full HD",
+      Microphone: "Dual AI Noise Reduction"
+    },
+
+    Battery: {
+      Capacity: "90Wh",
+      Charging: "330W Fast Charging"
+    },
+
+    Connectivity: {
+      WiFi: "Wi-Fi 7",
+      Bluetooth: "v5.4",
+      Thunderbolt: "2 x Thunderbolt 5",
+      HDMI: "HDMI 2.1",
+      Ethernet: "2.5G LAN"
+    },
+
+    Design: {
+      Weight: "3.3kg",
+      Build: "Aluminium Chassis",
+      Keyboard: "Per-Key RGB"
+    },
+
+    Security: {
+      WindowsHello: "Yes",
+      PrivacyShutter: "Yes"
+    },
+
+    Audio: {
+      Speakers: "DTS:X Ultra",
+      Microphones: "AI Noise Cancellation"
+    }
+  },
+
+  amazon: "https://www.amazon.in/acer-Predator-Helios-18-Gaming/dp/B0DMSK7N1L?th=1",
+  flipkart: "Not Available",
+  official: "https://www.acer.com/in-en/predator/laptops/helios/helios-18"
+},
+
+   {
       id: "hpomen",
       name: "HP Omen 16",
       brand: "HP",
