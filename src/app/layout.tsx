@@ -10,9 +10,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Header />
-        {children}
-      </body>
+  <CartProvider>
+    <Header />
+    {children}
+  </CartProvider>
+</body>
     </html>
   );
 }
