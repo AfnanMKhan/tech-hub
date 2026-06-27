@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 
 export async function GET() {
   return NextResponse.json([
+
     {
   id: "xiaomi17t",
   name: "Xiaomi 17T",

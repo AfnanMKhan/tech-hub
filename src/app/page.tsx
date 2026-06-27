@@ -251,7 +251,11 @@ export default function Home() {
               key={guide}
               href={`/blog/${guide}`}
               className="bg-[#F5E6CA] p-5 rounded-xl shadow hover:shadow-lg transition"
-            > "best-phone-under-20000",
+
+            > <Link href="/blog/under-10000">
+              Best Phones Under ₹10,000
+            </Link>
+
               <h3 className="font-semibold text-lg">
                 {guide.replace(/-/g, " ")}
               </h3>
